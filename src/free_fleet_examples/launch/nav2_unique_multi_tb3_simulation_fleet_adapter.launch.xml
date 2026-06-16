@@ -1,0 +1,16 @@
+<?xml version='1.0' ?>
+
+<launch>
+  <arg name="server_uri" default="" description="The URI of the api server to transmit state and task information."/>
+  <arg name="map_name" description="Введите название карты для запуска"/>
+  <arg name="config_name" description="Введите название конфигурационного файла для запуска"/>
+  <arg name="graph" description="Введите название файла графа"/>
+  <group>
+    <include file="$(find-pkg-share free_fleet_adapter)/fleet_adapter.launch.xml">
+      <arg name="use_sim_time" value="false"/>
+      <arg name="nav_graph_file" value="$(find-pkg-share test_building_maps)/maps/$(var map_name)/nav_graphs/$(var graph)" />
+      <arg name="config_file" value="$(find-pkg-share free_fleet_examples)/config/fleet/$(var config_name)"/>
+      <arg name="server_uri" value="$(var server_uri)"/>
+    </include>
+  </group>
+</launch>

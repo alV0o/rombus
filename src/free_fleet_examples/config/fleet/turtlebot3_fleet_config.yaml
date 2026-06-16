@@ -1,0 +1,85 @@
+# FLEET CONFIG =================================================================
+# RMF Fleet parameters
+
+rmf_fleet:
+  name: turtlebot3
+  limits:
+    linear: [1.0, 1.5] # velocity, acceleration
+    angular: [2.5, 5.0] # velocity, acceleration
+  profile: # Robot profile is modelled as a circle
+    footprint: 0.3 # radius in m
+    vicinity: 0.5 # radius in m
+  reversible: true # whether robots in this fleet can reverse
+  battery_system:
+    voltage: 12.0 # V
+    capacity: 24.0 # Ahr
+    charging_current: 5.0 # A
+  mechanical_system:
+    mass: 20.0 # kg
+    moment_of_inertia: 10.0 #kgm^2
+    friction_coefficient: 0.22
+  ambient_system:
+    power: 20.0 # W
+  tool_system:
+    power: 0.0 # W
+  recharge_threshold: 0.10 # Battery level below which robots in this fleet will not operate
+  recharge_soc: 1.0 # Battery level to which robots in this fleet should be charged up to during recharging tasks
+  publish_fleet_state: 10.0 # Publish frequency for fleet state, ensure that it is same as robot_state_update_frequency
+  account_for_battery_drain: true
+  task_capabilities: # Specify the types of RMF Tasks that robots in this fleet are capable of performing
+    loop: true
+    delivery: true
+  finishing_request: park   # [park, charge, nothing]
+  responsive_wait: true # Should responsive wait be on/off for the whole fleet by default? False if not specified.
+  robots:
+    robot1:
+      charger: dock_station_1
+      finishing_request:
+        type: park
+        waypoint_name: stay_zone_1
+      responsive_wait: false
+      navigation_stack: 2
+      init_timeout_sec: 5
+      initial_map: L1
+      maps:
+        L1:
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [4.0, -24.0, 0.0]
+    robot2:
+      charger: dock_station_2
+      finishing_request:
+        type: park
+        waypoint_name: stay_zone_2
+      responsive_wait: false
+      navigation_stack: 2
+      init_timeout_sec: 5
+      initial_map: L1
+      maps:
+        L1:
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [4.0, -27.0, 0.0]
+    robot3:
+      charger: dock_station_2
+      finishing_request:
+        type: park
+        waypoint_name: stay_zone_3
+      responsive_wait: false
+      navigation_stack: 2
+      init_timeout_sec: 5
+      initial_map: L1
+      maps:
+        L1:
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [4.0, -29.0, 0.0]
+
+  robot_state_update_frequency: 10.0 # Hz
+
+
+# TRANSFORM CONFIG =============================================================
+# For computing transforms between Robot and RMF coordinate systems
+
+# Optional
+reference_coordinates:
+  L1:
+    rmf: [[5.840, -8.584], [2.648, -47.905], [62.889, -3.130], [57.955, -41.826]]
+    robot: [[5.840, -8.584], [2.648, -47.905], [62.889, -3.130], [57.955, -41.826]]

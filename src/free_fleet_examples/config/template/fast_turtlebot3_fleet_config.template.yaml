@@ -1,0 +1,43 @@
+# FLEET CONFIG =================================================================
+# RMF Fleet parameters
+
+rmf_fleet:
+  name: fast_turtlebot3
+  limits:
+    linear: [0.5, 2.5] # velocity, acceleration
+    angular: [1.8, 3.2] # velocity, acceleration
+  profile: # Robot profile is modelled as a circle
+    footprint: 0.3 # radius in m
+    vicinity: 0.5 # radius in m
+  reversible: true # whether robots in this fleet can reverse
+  battery_system:
+    voltage: 12.0 # V
+    capacity: 24.0 # Ahr
+    charging_current: 5.0 # A
+  mechanical_system:
+    mass: 20.0 # kg
+    moment_of_inertia: 10.0 #kgm^2
+    friction_coefficient: 0.22
+  ambient_system:
+    power: 20.0 # W
+  tool_system:
+    power: 0.0 # W
+  recharge_threshold: 0.10 # Battery level below which robots in this fleet will not operate
+  recharge_soc: 1.0 # Battery level to which robots in this fleet should be charged up to during recharging tasks
+  publish_fleet_state: 10.0 # Publish frequency for fleet state, ensure that it is same as robot_state_update_frequency
+  account_for_battery_drain: true
+  task_capabilities: # Specify the types of RMF Tasks that robots in this fleet are capable of performing
+    loop: true
+    delivery: true
+  finishing_request: park   # [park, charge, nothing]
+  responsive_wait: true # Should responsive wait be on/off for the whole fleet by default? False if not specified.
+  robots:
+  
+  robot_state_update_frequency: 10.0 # Hz
+
+
+# TRANSFORM CONFIG =============================================================
+# For computing transforms between Robot and RMF coordinate systems
+
+# Optional
+reference_coordinates:

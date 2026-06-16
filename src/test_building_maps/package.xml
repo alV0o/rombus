@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>test_building_maps</name>
+  <version>0.0.0</version>
+  <description>Package for generating Open-RMF worlds</description>
+  <maintainer email="alvo@todo.todo">alvo</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Нужен при сборке, так как CMake запускает скрипты из него -->
+  <build_depend>rmf_building_map_tools</build_depend>
+  
+  <!-- Нужны во время работы (runtime) -->
+  <exec_depend>rmf_building_map_tools</exec_depend>
+  <exec_depend>rmf_building_sim_gz_plugins</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
