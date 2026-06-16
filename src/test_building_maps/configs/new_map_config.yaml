@@ -1,6 +1,9 @@
 image: ../assets/new_map.png
-resolution: 0.035000
-origin: [0.000000, -21.000000, 0.000000]
+resolution: 0.033600474250940586
+origin:
+- 0.0
+- -20.160284550564352
+- 0.0
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196

@@ -25,41 +25,41 @@ robots:
     stay_waypoint: "stay_zone_2"
     stay_type: "park"
 
-  # - name: "robot3"
-  #   x_pose: 4.0
-  #   y_pose: -29.0
-  #   z_pose: 0.01
-  #   roll: 0.0
-  #   pitch: 0.0
-  #   yaw: 0.0
-  #   initial_map: "L1"
-  #   charger: "dock_station_2"
-  #   type: "turtlebot3"
-  #   stay_waypoint: "stay_zone_3"
-  #   stay_type: "park"
+  - name: "robot3"
+    x_pose: 4.0
+    y_pose: -29.0
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_2"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_3"
+    stay_type: "park"
 
-  # - name: "fast_robot1"
-  #   x_pose: 31.0
-  #   y_pose: -4.0
-  #   z_pose: 0.01
-  #   roll: 0.0
-  #   pitch: 0.0
-  #   yaw: 0.0
-  #   initial_map: "L1"
-  #   charger: "dock_station_3"
-  #   type: "fast_turtlebot3"
-  #   stay_waypoint: "stay_zone_4"
-  #   stay_type: "park"
+  - name: "fast_robot1"
+    x_pose: 31.0
+    y_pose: -4.0
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_3"
+    type: "fast_turtlebot3"
+    stay_waypoint: "stay_zone_4"
+    stay_type: "park"
 
-  # - name: "fast_robot2"
-  #   x_pose: 35.0
-  #   y_pose: -4.0
-  #   z_pose: 0.01
-  #   roll: 0.0
-  #   pitch: 0.0
-  #   yaw: 0.0
-  #   initial_map: "L1"
-  #   charger: "dock_station_4"
-  #   type: "fast_turtlebot3"
-  #   stay_waypoint: "stay_zone_5"
-  #   stay_type: "park"
+  - name: "fast_robot2"
+    x_pose: 35.0
+    y_pose: -4.0
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_4"
+    type: "fast_turtlebot3"
+    stay_waypoint: "stay_zone_5"
+    stay_type: "park"
