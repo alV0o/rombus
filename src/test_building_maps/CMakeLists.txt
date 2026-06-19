@@ -58,6 +58,7 @@ install(
 )
 
 install(DIRECTORY assets DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY assets DESTINATION share/${PROJECT_NAME}/maps)
 install(DIRECTORY configs DESTINATION share/${PROJECT_NAME})
 
 ament_package()

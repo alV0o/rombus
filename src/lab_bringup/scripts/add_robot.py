@@ -24,7 +24,7 @@ def add_robot():
     robot['charger'] = input('Введите название зарядной станции: ')
     robot['type'] =  input('Введите тип робота: ')
     robot['stay_waypoint'] = input('Введите зону простоя: ')
-    robot['stay_type'] = input('Введите тип простоя (park, change, nothing): ')
+    robot['stay_type'] = input('Введите тип простоя (park, charge, nothing): ')
 
     return robot
 
@@ -49,9 +49,7 @@ def write_yaml(robot_config_path, robot):
 
 
 
-def main():
-
-    map_name = input('Введите название карты для нового робота: ')
+def main(map_name):
 
     print('---')
 
@@ -62,8 +60,9 @@ def main():
     robot_config_path = os.path.join(maps_dir, 'config', f'{map_name}_robot_config.yaml')
 
     write_yaml(robot_config_path, robot)
-    
-    print('Робот добавлен')
 
 if __name__ == "__main__":
-    main()
+    map_name = input('Введите название карты для нового робота: ')
+    main(map_name)
+    print('Робот добавлен')
+    

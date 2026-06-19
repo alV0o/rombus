@@ -1,25 +1,20 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from ament_index_python import get_package_share_directory
+import yaml
+import os
 
 def generate_launch_description():
 
-    pickup_names = [
-        'storage_pickup_arm_1',
-        'pickup_arm_4',
-        'pickup_arm_3',
-        'pickup_arm_2',
-        'pickup_arm_1',
-        'pickup_arm_5'
-    ]
+    sim_dir = get_package_share_directory('main_simulation')
+    mock_path = os.path.join(sim_dir, 'config', 'mocks.yaml')
+
+    with open(mock_path, 'r', encoding='utf-8') as file:
+        data = yaml.safe_load(file)
+
+    pickup_names = data['pickup']
     
-    dropoff_names = [
-        'storage_drop_arm_1',
-        'drop_arm_1',
-        'drop_arm_2',
-        'drop_arm_3',
-        'drop_arm_4',
-        'drop_arm_5'
-    ]
+    dropoff_names = data['dropoff']
 
     launch_actions = []
 

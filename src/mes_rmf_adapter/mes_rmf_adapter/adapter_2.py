@@ -28,7 +28,7 @@ class Task(BaseModel):
 id_order = input('Введите ID заказа: ')
 get_url = f"http://192.168.0.134:8000/api/v1/work-orders/{id_order}/batches"
 get_headers = {
-    "Authorization": "Bearer 1|H6bkMBDTCSKRfuD445VVXQO55tY2Pp6PDnLIkBRe48f72971",
+    "Authorization": "Bearer 1|9vVg1vhzPZPBGvhcTkiifUUaOChfjoYK0cmbvAP5806a0b6e",
     "Accept": "application/json"  # Хорошая практика для работы с API
 }
 
@@ -49,12 +49,21 @@ def parsing_order(data):
     for batch in data['data']:
         if batch['status'] == 'IN_PROGRESS': #в идеале сделать четвертое состояние (Должен начаться)
             for step in batch['steps']:
-                if step['status'] == 'IN_PROGRESS' and step['id'] not in step_id_dict.values():
+                if step['status'] == 'READY' and step['id']:
                     try:
                         json_string = json.loads(step['instruction'])
                         task = Task(**json_string)
                         task.task_id = str(uuid.uuid4())
                         print(f'Добавлен таск с id {task.task_id}')
+                        
+                        post_url = f"http://192.168.0.134:8000/api/v1/batch-steps/{step['id']}/start"
+                        post_headers ={
+                            "Authorization": "Bearer 1|9vVg1vhzPZPBGvhcTkiifUUaOChfjoYK0cmbvAP5806a0b6e"
+                        }
+                        print(f'Шаг [{step['id']}] запущен')
+                        response = requests.post(post_url, headers=post_headers)
+                        print(f'Код статуса: [{response.status_code}]')
+                        
                         task_queue.put(task)
                         step_id_dict[task.task_id] = step['id']
                     except:
@@ -168,7 +177,7 @@ class TaskPublisher(Node):
                     id_step = step_id_dict[task_id]
                     post_url = f"http://192.168.0.134:8000/api/v1/batch-steps/{id_step}/complete"
                     post_headers ={
-                        "Authorization": "Bearer 1|H6bkMBDTCSKRfuD445VVXQO55tY2Pp6PDnLIkBRe48f72971"
+                        "Authorization": "Bearer 1|9vVg1vhzPZPBGvhcTkiifUUaOChfjoYK0cmbvAP5806a0b6e"
                     }
                     self.get_logger().info(f'Задача [{task_id}] выполнена')
                     response = requests.post(post_url, headers=post_headers)

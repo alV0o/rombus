@@ -1,0 +1,102 @@
+[INFO] [launch]: All log files can be found below /home/alvo/.ros/log/2026-06-18-17-00-59-789946-alvo-MEGABOOK-K16S-AMD-7000-88939
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [fleet_adapter.py-1]: process started with pid [88955]
+[fleet_adapter.py-1] [retreat_to_charger_interval] value is not provided, default to 10 seconds
+[fleet_adapter.py-1] Default fleet finishing task set to [park]
+[fleet_adapter.py-1] Maximum delay is not provided, default to 10.0
+[fleet_adapter.py-1] Robot [fast_robot1] is configured to perform ParkRobot at [stay_zone_4] as finishing request.
+[fleet_adapter.py-1] Robot [fast_robot2] is configured to perform ParkRobot at [stay_zone_5] as finishing request.
+[fleet_adapter.py-1] [INFO] [1781784063.860215940] [fast_turtlebot3_fleet_adapter]: Parameter [discovery_timeout] set to: 60.000000
+[fleet_adapter.py-1] [INFO] [1781784063.899830182] [fast_turtlebot3_fleet_adapter]: Registering to query topic rmf_traffic/query_update_1
+[fleet_adapter.py-1] [INFO] [1781784063.950457969] [fast_turtlebot3_fleet_adapter]: Mirror handling new sync of 1 queries from schedule node [b2612d17-6c8b-4173-b83c-d74c909c0211]
+[fleet_adapter.py-1] [INFO] [1781784065.021756330] [fast_turtlebot3_command_handle]: Transformation error estimate for L1: 4.4570641144987167e-29
+[fleet_adapter.py-1] [INFO] [1781784065.076213400] [fast_turtlebot3_fleet_adapter]: Attempting to connect to ws://localhost:8000/_internal
+[fleet_adapter.py-1] [INFO] [1781784065.083708760] [fast_turtlebot3_fleet_adapter]: Succesfully connected to ws://localhost:8000/_internal
+[fleet_adapter.py-1] [INFO] [1781784065.083814917] [fast_turtlebot3_fleet_adapter]: Connected to server
+[fleet_adapter.py-1] [INFO] [1781784065.083848011] [fast_turtlebot3_fleet_adapter]: Sent all updates
+[fleet_adapter.py-1] [INFO] [1781784065.083863732] [fast_turtlebot3_fleet_adapter]: Attempting queue flush if connected
+[fleet_adapter.py-1] [WARN] [1781784065.093173892] [fast_turtlebot3_fleet_adapter]: [FleetUpdateHandle::set_retreat_to_charger_interval] This parameter is no longer being used.
+[fleet_adapter.py-1] [INFO] [1781784065.093314135] [fast_turtlebot3_fleet_adapter]: Fleet [fast_turtlebot3] is configured to perform delivery tasks
+[fleet_adapter.py-1] [INFO] [1781784065.093356938] [fast_turtlebot3_fleet_adapter]: Fleet [fast_turtlebot3] is configured to perform patrol tasks
+[fleet_adapter.py-1] [INFO] [1781784065.093456562] [fast_turtlebot3_fleet_adapter]: Finished configuring Easy Full Control adapter for fleet [fast_turtlebot3]
+[fleet_adapter.py-1] [INFO] [1781784065.110397545] [fast_turtlebot3_command_handle]: Initializing robot [fast_robot2]...
+[fleet_adapter.py-1] [INFO] [1781784066.112410396] [fast_turtlebot3_fleet_adapter]: Adding robot [fast_robot2] to fleet [fast_turtlebot3].
+[fleet_adapter.py-1] [INFO] [1781784066.117752367] [fast_turtlebot3_command_handle]: Initializing robot [fast_robot1]...
+[fleet_adapter.py-1] [INFO] [1781784066.150174743] [fast_turtlebot3_fleet_adapter]: Added a robot named [fast_robot2] with participant ID [3]
+[fleet_adapter.py-1] [INFO] [1781784066.171097792] [fast_turtlebot3_fleet_adapter]: Beginning a new parking task for robot [fast_turtlebot3/fast_robot2]
+[fleet_adapter.py-1] [INFO] [1781784066.174824681] [fast_turtlebot3_fleet_adapter]: Auto-selected parking spot waypoint [1] for robot [fast_turtlebot3/fast_robot2]
+[fleet_adapter.py-1] [INFO] [1781784066.180202993] [fast_turtlebot3_fleet_adapter]: Selecting a new go_to_place location from [1] choices for robot [fast_turtlebot3/fast_robot2]
+[fleet_adapter.py-1] [INFO] [1781784066.180350870] [fast_turtlebot3_fleet_adapter]: Got distance from [1] as 3.879624
+[fleet_adapter.py-1] [INFO] [1781784066.180652076] [fast_turtlebot3_fleet_adapter]: Planning for [fast_turtlebot3/fast_robot2] to [stay_zone_5] from one of these locations:
+[fleet_adapter.py-1]  -- lane 2: { L1 < 35.0234 -2.06033> [stay_zone_5] } -> { L1 <34.2107 -7.1189> [#2] } | location <35 -4> | orientation -6.23816e-16
+[fleet_adapter.py-1]  -- lane 3: { L1 <34.2107 -7.1189> [#2] } -> { L1 < 35.0234 -2.06033> [stay_zone_5] } | location <35 -4> | orientation -6.23816e-16
+[fleet_adapter.py-1] [INFO] [1781784066.183780742] [fast_turtlebot3_fleet_adapter]: Successfully added robot [fast_robot2] to the fleet [fast_turtlebot3].
+[fleet_adapter.py-1] [INFO] [1781784066.184126685] [fast_turtlebot3_fleet_adapter]: Charger waypoint for robot [fast_turtlebot3/fast_robot2] set to index [5]
+[fleet_adapter.py-1] [INFO] [1781784066.185203549] [fast_turtlebot3_fleet_adapter]: Beginning a new parking task for robot [fast_turtlebot3/fast_robot2]
+[fleet_adapter.py-1] [INFO] [1781784066.188252670] [fast_turtlebot3_fleet_adapter]: Selecting a new go_to_place location from [1] choices for robot [fast_turtlebot3/fast_robot2]
+[fleet_adapter.py-1] [INFO] [1781784066.188350871] [fast_turtlebot3_fleet_adapter]: Got distance from [1] as 3.879624
+[fleet_adapter.py-1] [INFO] [1781784066.188629994] [fast_turtlebot3_fleet_adapter]: Planning for [fast_turtlebot3/fast_robot2] to [stay_zone_5] from one of these locations:
+[fleet_adapter.py-1]  -- lane 2: { L1 < 35.0234 -2.06033> [stay_zone_5] } -> { L1 <34.2107 -7.1189> [#2] } | location <35 -4> | orientation -6.23816e-16
+[fleet_adapter.py-1]  -- lane 3: { L1 <34.2107 -7.1189> [#2] } -> { L1 < 35.0234 -2.06033> [stay_zone_5] } | location <35 -4> | orientation -6.23816e-16
+[fleet_adapter.py-1] [INFO] [1781784066.193277985] [fast_turtlebot3_fleet_adapter]: Executing final go_to_place [stay_zone_5] for robot [fast_turtlebot3/fast_robot2]
+[fleet_adapter.py-1] [INFO] [1781784066.196261088] [fast_turtlebot3_fleet_adapter]: [fast_turtlebot3/fast_robot2] Moving to [place:stay_zone_5] via
+[fleet_adapter.py-1]  -- t=0 <          35           -4 -1.08876e-17> yaw=-6.23816e-16 approach lanes:
+[fleet_adapter.py-1]  -- t=1.44187 <      35       -4 -1.58286> yaw=-90.6913 approach lanes:
+[fleet_adapter.py-1]  -- t=5.52149 #1 < 35.0234 -2.06033 -1.58286> yaw=-90.6913 approach lanes: 3
+[fleet_adapter.py-1] [INFO] [1781784066.204287992] [fast_turtlebot3_command_handle]: Commanding [fast_robot2] to navigate to [35.02340344 -2.06032923 -1.58286142] on map [L1]
+[fleet_adapter.py-1] [INFO] [1781784066.210716947] [fast_turtlebot3_command_handle]: Navigation goal [185, 51, 29, 79, 193, 185, 61, 28, 144, 101, 5, 237, 63, 64, 52, 204] accepted
+[fleet_adapter.py-1] [WARN] [1781784066.215017492] [fast_turtlebot3_fleet_adapter]: Failed to update using patch for DB version 121 (mirror version: none, patch base: 119); requesting new update
+[fleet_adapter.py-1] [INFO] [1781784066.215095113] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since beginning of recorded history
+[fleet_adapter.py-1] [INFO] [1781784067.121021887] [fast_turtlebot3_command_handle]: Unable to get transform between base_footprint and map: <class 'tf2.ExtrapolationException'>: Lookup would require extrapolation into the past.  Requested time 413.040000 but the earliest data is at time 413.200000, when looking up transform from frame [fast_robot1/base_footprint] to frame [fast_robot1/map]
+[fleet_adapter.py-1] [INFO] [1781784067.122531162] [fast_turtlebot3_command_handle]: Failed to update robot [fast_robot1]: Unable to get transform between base_footprint and map
+[fleet_adapter.py-1] [INFO] [1781784068.120388110] [fast_turtlebot3_fleet_adapter]: Adding robot [fast_robot1] to fleet [fast_turtlebot3].
+[fleet_adapter.py-1] [INFO] [1781784068.209704835] [fast_turtlebot3_fleet_adapter]: Added a robot named [fast_robot1] with participant ID [4]
+[fleet_adapter.py-1] [INFO] [1781784068.244141756] [fast_turtlebot3_fleet_adapter]: Beginning a new parking task for robot [fast_turtlebot3/fast_robot1]
+[fleet_adapter.py-1] [INFO] [1781784068.246642239] [fast_turtlebot3_fleet_adapter]: Auto-selected parking spot waypoint [0] for robot [fast_turtlebot3/fast_robot1]
+[fleet_adapter.py-1] [INFO] [1781784068.247783679] [fast_turtlebot3_fleet_adapter]: Selecting a new go_to_place location from [1] choices for robot [fast_turtlebot3/fast_robot1]
+[fleet_adapter.py-1] [INFO] [1781784068.247877933] [fast_turtlebot3_fleet_adapter]: Got distance from [0] as 4.061657
+[fleet_adapter.py-1] [INFO] [1781784068.251152913] [fast_turtlebot3_fleet_adapter]: Planning for [fast_turtlebot3/fast_robot1] to [stay_zone_4] from one of these locations:
+[fleet_adapter.py-1]  -- lane 6: { L1 < 30.6364 -6.75873> [#3] } -> { L1 <31.385 -2.006> [stay_zone_4] } | location <31 -4> | orientation 2.33275e-16
+[fleet_adapter.py-1]  -- lane 7: { L1 <31.385 -2.006> [stay_zone_4] } -> { L1 < 30.6364 -6.75873> [#3] } | location <31 -4> | orientation 2.33275e-16
+[fleet_adapter.py-1] [INFO] [1781784068.276755070] [fast_turtlebot3_fleet_adapter]: Successfully added robot [fast_robot1] to the fleet [fast_turtlebot3].
+[fleet_adapter.py-1] [INFO] [1781784068.280072152] [fast_turtlebot3_fleet_adapter]: Charger waypoint for robot [fast_turtlebot3/fast_robot1] set to index [6]
+[fleet_adapter.py-1] [INFO] [1781784068.281881892] [fast_turtlebot3_fleet_adapter]: Beginning a new parking task for robot [fast_turtlebot3/fast_robot1]
+[fleet_adapter.py-1] [INFO] [1781784068.283217129] [fast_turtlebot3_fleet_adapter]: Selecting a new go_to_place location from [1] choices for robot [fast_turtlebot3/fast_robot1]
+[fleet_adapter.py-1] [INFO] [1781784068.283316702] [fast_turtlebot3_fleet_adapter]: Got distance from [0] as 4.061657
+[fleet_adapter.py-1] [INFO] [1781784068.283573281] [fast_turtlebot3_fleet_adapter]: Planning for [fast_turtlebot3/fast_robot1] to [stay_zone_4] from one of these locations:
+[fleet_adapter.py-1]  -- lane 6: { L1 < 30.6364 -6.75873> [#3] } -> { L1 <31.385 -2.006> [stay_zone_4] } | location <31 -4> | orientation 2.33275e-16
+[fleet_adapter.py-1]  -- lane 7: { L1 <31.385 -2.006> [stay_zone_4] } -> { L1 < 30.6364 -6.75873> [#3] } | location <31 -4> | orientation 2.33275e-16
+[fleet_adapter.py-1] [INFO] [1781784068.288559239] [fast_turtlebot3_fleet_adapter]: Executing final go_to_place [stay_zone_4] for robot [fast_turtlebot3/fast_robot1]
+[fleet_adapter.py-1] [INFO] [1781784068.290868902] [fast_turtlebot3_fleet_adapter]: [fast_turtlebot3/fast_robot1] Moving to [place:stay_zone_4] via
+[fleet_adapter.py-1]  -- t=0 <         31          -4 4.07142e-18> yaw=2.33275e-16 approach lanes:
+[fleet_adapter.py-1]  -- t=1.54112 <      31       -4 -1.76152> yaw=-100.928 approach lanes:
+[fleet_adapter.py-1]  -- t=5.80278 #0 <  31.385   -2.006 -1.76152> yaw=-100.928 approach lanes: 6
+[fleet_adapter.py-1] [INFO] [1781784068.301955866] [fast_turtlebot3_command_handle]: Commanding [fast_robot1] to navigate to [31.38498738 -2.00599681 -1.76152214] on map [L1]
+[fleet_adapter.py-1] [INFO] [1781784068.307754174] [fast_turtlebot3_command_handle]: Navigation goal [163, 202, 83, 12, 215, 148, 88, 224, 121, 213, 184, 232, 41, 169, 101, 123] accepted
+[fleet_adapter.py-1] [INFO] [1781784077.913579849] [fast_turtlebot3_command_handle]: Navigation goal [185, 51, 29, 79, 193, 185, 61, 28, 144, 101, 5, 237, 63, 64, 52, 204] reached
+[fleet_adapter.py-1] [INFO] [1781784079.593209825] [fast_turtlebot3_command_handle]: Navigation goal [163, 202, 83, 12, 215, 148, 88, 224, 121, 213, 184, 232, 41, 169, 101, 123] reached
+[fleet_adapter.py-1] [INFO] [1781784099.603913085] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784099.603992028] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since version [230]
+[fleet_adapter.py-1] [INFO] [1781784119.605051361] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784119.605131617] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since beginning of recorded history
+[fleet_adapter.py-1] [INFO] [1781784157.301344601] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784157.301432231] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since version [231]
+[fleet_adapter.py-1] [INFO] [1781784177.302471246] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784177.302553756] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since beginning of recorded history
+[fleet_adapter.py-1] [INFO] [1781784217.301710032] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784217.301798774] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since version [232]
+[fleet_adapter.py-1] [INFO] [1781784237.301410674] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784237.301469258] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since beginning of recorded history
+[fleet_adapter.py-1] [INFO] [1781784277.301416626] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784277.301495759] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since version [233]
+[fleet_adapter.py-1] [INFO] [1781784297.301289949] [fast_turtlebot3_fleet_adapter]: Requesting new schedule update because update timed out
+[fleet_adapter.py-1] [INFO] [1781784297.301375083] [fast_turtlebot3_fleet_adapter]: [rmf_traffic_ros2::MirrorManager::request_update] Requesting changes for query ID [1] since beginning of recorded history
+[fleet_adapter.py-1] [INFO] [1781784315.978418869] [fast_turtlebot3_fleet_adapter]: [Bidder] Received Bidding notice for task_id [delivery.dispatch-f25f5c8a7e]
+[fleet_adapter.py-1] [INFO] [1781784365.091684165] [fast_turtlebot3_fleet_adapter]: Cache sizes:
+[fleet_adapter.py-1]  - DifferentialDrive: 348
+[fleet_adapter.py-1]  - ShortestPath: 29
+[fleet_adapter.py-1]  - Euclidean: 0
+[fleet_adapter.py-1] [INFO] [1781784665.097052164] [fast_turtlebot3_fleet_adapter]: Cache sizes:
+[fleet_adapter.py-1]  - DifferentialDrive: 348
+[fleet_adapter.py-1]  - ShortestPath: 29
+[fleet_adapter.py-1]  - Euclidean: 0

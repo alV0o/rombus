@@ -6,18 +6,12 @@ from PIL import Image
 
 yaml = YAML()
 
-map_name = input('Input map name: ')
 
 maps_dir = get_package_share_directory('test_building_maps')
 
 template_path = os.path.join(maps_dir, 'configs', 'template', 'template_config.yaml')
 
-map_path = os.path.join(maps_dir, 'maps', f'{map_name}' , f'{map_name}.building.yaml')
-
-map_config_path = os.path.join(maps_dir, 'configs', f'{map_name}_config.yaml')
-
-
-def get_yaml(map_path):
+def get_yaml(map_path, map_config_path):
     with open(map_path, 'r') as file:
         data = yaml.load(file)
 
@@ -70,7 +64,7 @@ def get_resolution(measurements, vertices):
     return calculate_resolution(first_vertex[0], second_vertex[0], first_vertex[1], second_vertex[1], distance)
 #
 def calculate_resolution(x1, x2, y1, y2, distance):
-    len = math.sqrt((x2-x1)**8 + (y2-y1)**2)
+    len = math.sqrt((x2-x1)**2 + (y2-y1)**2)
     return distance / len
 
 def calculate_origin(img_path, resolution):
@@ -94,10 +88,13 @@ def create_config(template_path, img_path, resolution, y_origin, map_config_path
     with open(map_config_path, 'w') as file:
         yaml.dump(data, file)
 
-def main():
-    get_yaml(map_path=map_path)
+def main(map_name):
+    map_path = os.path.join(maps_dir, 'maps', f'{map_name}' , f'{map_name}.building.yaml')
+
+    map_config_path = os.path.join(maps_dir, 'configs', f'{map_name}_config.yaml')
+    get_yaml(map_path=map_path, map_config_path=map_config_path)
 
 
 
 if __name__ == "__main__":
-    main()
+    main(input('Input map name: '))

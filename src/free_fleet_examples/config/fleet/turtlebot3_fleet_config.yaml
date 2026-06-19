@@ -43,8 +43,8 @@ rmf_fleet:
       initial_map: L1
       maps:
         L1:
-          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/fabric_map_config.yaml
-      initial_pose: [5.5, -55.0, 0.0]
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [4.0, -24.0, 0.0]
     robot2:
       charger: dock_station_2
       finishing_request:
@@ -56,10 +56,10 @@ rmf_fleet:
       initial_map: L1
       maps:
         L1:
-          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/fabric_map_config.yaml
-      initial_pose: [5.5, -54.5, 0.0]
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [4.0, -27.0, 0.0]
     robot3:
-      charger: dock_station_3
+      charger: dock_station_2
       finishing_request:
         type: park
         waypoint_name: stay_zone_3
@@ -69,47 +69,8 @@ rmf_fleet:
       initial_map: L1
       maps:
         L1:
-          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/fabric_map_config.yaml
-      initial_pose: [5.5, -54.0, 0.0]
-    robot4:
-      charger: dock_station_1
-      finishing_request:
-        type: park
-        waypoint_name: stay_zone_4
-      responsive_wait: false
-      navigation_stack: 2
-      init_timeout_sec: 5
-      initial_map: L1
-      maps:
-        L1:
-          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/fabric_map_config.yaml
-      initial_pose: [38.5, -3.5, 0.0]
-    robot5:
-      charger: dock_station_2
-      finishing_request:
-        type: park
-        waypoint_name: stay_zone_5
-      responsive_wait: false
-      navigation_stack: 2
-      init_timeout_sec: 5
-      initial_map: L1
-      maps:
-        L1:
-          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/fabric_map_config.yaml
-      initial_pose: [38.5, -4.0, 0.0]
-    robot6:
-      charger: dock_station_3
-      finishing_request:
-        type: park
-        waypoint_name: stay_zone_1
-      responsive_wait: false
-      navigation_stack: 2
-      init_timeout_sec: 5
-      initial_map: L1
-      maps:
-        L1:
-          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/fabric_map_config.yaml
-      initial_pose: [38.5, -4.5, 0.0]
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [4.0, -29.0, 0.0]
 
   robot_state_update_frequency: 10.0 # Hz
 
@@ -120,5 +81,5 @@ rmf_fleet:
 # Optional
 reference_coordinates:
   L1:
-    rmf: [[98.329, -53.593], [96.017, -16.402], [2.704, -2.506], [15.987, -61.853]]
-    robot: [[98.329, -53.593], [96.017, -16.402], [2.704, -2.506], [15.987, -61.853]]
+    rmf: [[5.839807103035866, -8.583763043155464], [2.6483680025917575, -47.905502085555], [62.88918548615704, -3.1295980075862904], [57.95505932695293, -41.82609238536197]]
+    robot: [[5.839807103035866, -8.583763043155464], [2.6483680025917575, -47.905502085555], [62.88918548615704, -3.1295980075862904], [57.95505932695293, -41.82609238536197]]

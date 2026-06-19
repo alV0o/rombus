@@ -1,0 +1,686 @@
+[INFO] [launch]: All log files can be found below /home/alvo/.ros/log/2026-06-19-10-50-10-987070-alvo-MEGABOOK-K16S-AMD-7000-32443
+[INFO] [launch]: Default logging verbosity is set to INFO
+Input map name: [INFO] [launch.user]: Launching robot7
+[INFO] [launch.user]: robot7 map yaml: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/test_config.yaml
+[INFO] [launch.user]: robot7 params yaml: /home/alvo/test_ws/install/main_simulation/share/main_simulation/params/nav2_multirobot_params_template.yaml
+[INFO] [launch.user]: robot7 rviz config file: /home/alvo/test_ws/install/main_simulation/share/main_simulation/rviz/nav2_namespaced_view.rviz
+[INFO] [launch.user]: robot7 using robot state pub: True
+[INFO] [launch.user]: robot7 autostart: True
+[INFO] [xacro-1]: process started with pid [32446]
+[INFO] [xacro-1]: process has finished cleanly [pid 32446]
+[INFO] [gz-2]: process started with pid [32447]
+[INFO] [xacro-3]: process started with pid [32482]
+[INFO] [parameter_bridge-4]: process started with pid [32483]
+[INFO] [create-5]: process started with pid [32484]
+[INFO] [robot_state_publisher-6]: process started with pid [32485]
+[INFO] [component_container_isolated-7]: process started with pid [32486]
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/world[@name="sim_world"]/gui/window:/tmp/nav2_z73oa97c.sdf:L32]: XML Element[window], child of element[gui], not defined in SDF. Copying[window] as children of [gui].
+[gz-2] [INFO] [1781848211.675386555] [rmf_simulation_door_manager]: Loading DoorManager
+[gz-2] [INFO] [1781848211.684506068] [rmf_simulation_lift_manager]: Starting LiftManager
+[robot_state_publisher-6] [INFO] [1781848211.899043108] [robot7.robot_state_publisher]: Robot initialized
+[create-5] [INFO] [1781848211.904038385] [robot7.ros_gz_sim]: Requesting list of world names.
+[component_container_isolated-7] [INFO] [1781848211.915309574] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libamcl_core.so
+[component_container_isolated-7] [INFO] [1781848211.925243781] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-7] [INFO] [1781848211.925295320] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-7] [INFO] [1781848211.929935963] [robot7.amcl]: 
+[component_container_isolated-7] 	amcl lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848211.931188171] [robot7.amcl]: Creating
+[component_container_isolated-7] [INFO] [1781848211.933045148] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libmap_server_core.so
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/amcl' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848211.944596147] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>
+[component_container_isolated-7] [INFO] [1781848211.944637888] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>
+[component_container_isolated-7] [INFO] [1781848211.944642787] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-7] [INFO] [1781848211.944646535] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-7] [INFO] [1781848211.948366389] [robot7.map_server]: 
+[component_container_isolated-7] 	map_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848211.948399383] [robot7.map_server]: Creating
+[component_container_isolated-7] [INFO] [1781848211.949106949] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libnav2_lifecycle_manager_core.so
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/map_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848211.950156797] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-7] [INFO] [1781848211.950170894] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-7] [INFO] [1781848211.953533078] [robot7.lifecycle_manager_localization]: Creating
+[component_container_isolated-7] [INFO] [1781848211.957463359] [robot7.lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/lifecycle_manager_localization' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848211.958665801] [robot7.lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-7] [INFO] [1781848211.958693745] [robot7.lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848211.958790542] [robot7.map_server]: Configuring
+[component_container_isolated-7] [INFO] [1781848211.958843895] [map_io]: Loading yaml file: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/test_config.yaml
+[component_container_isolated-7] [INFO] [1781848211.959045935] [map_io]: resolution: 0.0338831
+[component_container_isolated-7] [INFO] [1781848211.959056275] [map_io]: origin[0]: 0
+[component_container_isolated-7] [INFO] [1781848211.959062908] [map_io]: origin[1]: -27.1065
+[component_container_isolated-7] [INFO] [1781848211.959071985] [map_io]: origin[2]: 0
+[component_container_isolated-7] [INFO] [1781848211.959074831] [map_io]: free_thresh: 0.196
+[component_container_isolated-7] [INFO] [1781848211.959077426] [map_io]: occupied_thresh: 0.65
+[component_container_isolated-7] [INFO] [1781848211.959082325] [map_io]: mode: trinary
+[component_container_isolated-7] [INFO] [1781848211.959085522] [map_io]: negate: 0
+[component_container_isolated-7] [INFO] [1781848211.959235732] [map_io]: Loading image_file: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/../assets/test.png
+[INFO] [xacro-3]: process has finished cleanly [pid 32482]
+[component_container_isolated-7] [INFO] [1781848211.992415263] [map_io]: Read map /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/../assets/test.png: 1200 X 800 map @ 0.0338831 m/cell
+[component_container_isolated-7] [INFO] [1781848211.995693926] [robot7.lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[component_container_isolated-7] [INFO] [1781848211.995827474] [robot7.amcl]: Configuring
+[component_container_isolated-7] [INFO] [1781848211.995930082] [robot7.amcl]: initTransforms
+[component_container_isolated-7] [INFO] [1781848211.999207592] [robot7.amcl]: initPubSub
+[component_container_isolated-7] [INFO] [1781848211.999858239] [robot7.amcl]: Subscribed to map topic.
+[component_container_isolated-7] [INFO] [1781848212.001299342] [robot7.lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.001356282] [robot7.map_server]: Activating
+[component_container_isolated-7] [INFO] [1781848212.002235941] [robot7.map_server]: Creating bond (map_server) to lifecycle manager.
+[component_container_isolated-7] [INFO] [1781848212.002771335] [robot7.amcl]: Received a 1200 X 800 map @ 0.034 m/pix
+[component_container_isolated-7] [INFO] [1781848212.103700729] [robot7.lifecycle_manager_localization]: Server map_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848212.103745084] [robot7.lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.103906997] [robot7.amcl]: Activating
+[component_container_isolated-7] [INFO] [1781848212.103939891] [robot7.amcl]: initialPoseReceived
+[component_container_isolated-7] [INFO] [1781848212.104091704] [robot7.amcl]: Setting pose (0.000000): 20.000 -3.000 0.434
+[component_container_isolated-7] [INFO] [1781848212.104725829] [robot7.amcl]: Creating bond (amcl) to lifecycle manager.
+[create-5] [INFO] [1781848212.105763022] [robot7.ros_gz_sim]: Entity creation successful.
+[component_container_isolated-7] [INFO] [1781848212.111612689] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libcontroller_server_core.so
+[component_container_isolated-7] [INFO] [1781848212.114225786] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-7] [INFO] [1781848212.114241516] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-7] [INFO] [1781848212.117713020] [robot7.controller_server]: 
+[component_container_isolated-7] 	controller_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.132585113] [robot7.controller_server]: Creating controller server
+[component_container_isolated-7] [INFO] [1781848212.136451690] [robot7.local_costmap.local_costmap]: 
+[component_container_isolated-7] 	local_costmap lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.137692116] [robot7.local_costmap.local_costmap]: Creating Costmap
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/controller_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.139884320] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libsmoother_server_core.so
+[component_container_isolated-7] [INFO] [1781848212.141484009] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-7] [INFO] [1781848212.141495722] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-7] [INFO] [1781848212.144834570] [robot7.smoother_server]: 
+[component_container_isolated-7] 	smoother_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.149901806] [robot7.smoother_server]: Creating smoother server
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/smoother_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.152000409] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libplanner_server_core.so
+[component_container_isolated-7] [INFO] [1781848212.152720560] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-7] [INFO] [1781848212.152731612] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-7] [INFO] [1781848212.156125486] [robot7.planner_server]: 
+[component_container_isolated-7] 	planner_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.161164398] [robot7.planner_server]: Creating
+[component_container_isolated-7] [INFO] [1781848212.164761264] [robot7.global_costmap.global_costmap]: 
+[component_container_isolated-7] 	global_costmap lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.165931534] [robot7.global_costmap.global_costmap]: Creating Costmap
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/planner_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.168192000] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libroute_server_core.so
+[component_container_isolated-7] [INFO] [1781848212.169690464] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_route::RouteServer>
+[component_container_isolated-7] [INFO] [1781848212.169701916] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_route::RouteServer>
+[component_container_isolated-7] [INFO] [1781848212.173206745] [robot7.route_server]: 
+[component_container_isolated-7] 	route_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/route_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.174861511] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libbehavior_server_core.so
+[component_container_isolated-7] [INFO] [1781848212.175638792] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-7] [INFO] [1781848212.175649272] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-7] [INFO] [1781848212.179039149] [robot7.behavior_server]: 
+[component_container_isolated-7] 	behavior_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/behavior_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.186684715] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libbt_navigator_core.so
+[component_container_isolated-7] [INFO] [1781848212.190452111] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-7] [INFO] [1781848212.190481197] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-7] [INFO] [1781848212.195082163] [robot7.bt_navigator]: 
+[component_container_isolated-7] 	bt_navigator lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.200428087] [robot7.bt_navigator]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/bt_navigator' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.202360990] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libwaypoint_follower_core.so
+[component_container_isolated-7] [INFO] [1781848212.203519467] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-7] [INFO] [1781848212.203532984] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-7] [INFO] [1781848212.205960752] [robot7.lifecycle_manager_localization]: Server amcl connected with bond.
+[component_container_isolated-7] [INFO] [1781848212.206008895] [robot7.lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.206020598] [robot7.lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.207436172] [robot7.waypoint_follower]: 
+[component_container_isolated-7] 	waypoint_follower lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.208606492] [robot7.waypoint_follower]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/waypoint_follower' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.210331323] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libvelocity_smoother_core.so
+[component_container_isolated-7] [INFO] [1781848212.211034682] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-7] [INFO] [1781848212.211044460] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-7] [INFO] [1781848212.214515815] [robot7.velocity_smoother]: 
+[component_container_isolated-7] 	velocity_smoother lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/velocity_smoother' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.216139541] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libcollision_monitor_core.so
+[component_container_isolated-7] [INFO] [1781848212.218389315] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_collision_monitor::CollisionMonitor>
+[component_container_isolated-7] [INFO] [1781848212.218401228] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_collision_monitor::CollisionMonitor>
+[component_container_isolated-7] [INFO] [1781848212.222041469] [robot7.collision_monitor]: 
+[component_container_isolated-7] 	collision_monitor lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/collision_monitor' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.223771650] [robot7.nav2_container]: Load Library: /opt/ros/jazzy/lib/libopennav_docking_core.so
+[component_container_isolated-7] [INFO] [1781848212.225197003] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<opennav_docking::DockingServer>
+[component_container_isolated-7] [INFO] [1781848212.225207854] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<opennav_docking::DockingServer>
+[component_container_isolated-7] [INFO] [1781848212.228977424] [robot7.docking_server]: 
+[component_container_isolated-7] 	docking_server lifecycle node launched. 
+[component_container_isolated-7] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848212.229019946] [robot7.docking_server]: Creating docking_server
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/docking_server' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.230899326] [robot7.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-7] [INFO] [1781848212.230911028] [robot7.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-7] [INFO] [1781848212.233895613] [robot7.lifecycle_manager_navigation]: Creating
+[component_container_isolated-7] [INFO] [1781848212.234710597] [robot7.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot7/lifecycle_manager_navigation' in container 'robot7/nav2_container'
+[component_container_isolated-7] [INFO] [1781848212.238953801] [robot7.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.238980142] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.239072821] [robot7.controller_server]: Configuring controller interface
+[component_container_isolated-7] [INFO] [1781848212.239092920] [robot7.controller_server]: getting progress checker plugins..
+[component_container_isolated-7] [INFO] [1781848212.239232961] [robot7.controller_server]: getting goal checker plugins..
+[component_container_isolated-7] [INFO] [1781848212.239376438] [robot7.controller_server]: Controller frequency set to 20.0000Hz
+[component_container_isolated-7] [INFO] [1781848212.239417056] [robot7.local_costmap.local_costmap]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.241334770] [robot7.local_costmap.local_costmap]: Using plugin "voxel_layer"
+[component_container_isolated-7] [INFO] [1781848212.244159124] [robot7.local_costmap.local_costmap]: Subscribed to Topics: scan
+[component_container_isolated-7] [INFO] [1781848212.246170539] [robot7.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[component_container_isolated-7] [INFO] [1781848212.246183083] [robot7.local_costmap.local_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-7] [INFO] [1781848212.246544782] [robot7.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-7] [INFO] [1781848212.251388025] [robot7.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[component_container_isolated-7] [INFO] [1781848212.251578624] [robot7.controller_server]: Controller Server has progress_checker  progress checkers available.
+[component_container_isolated-7] [INFO] [1781848212.252160878] [robot7.controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[component_container_isolated-7] [INFO] [1781848212.252527146] [robot7.controller_server]: Controller Server has goal_checker  goal checkers available.
+[component_container_isolated-7] [INFO] [1781848212.256891164] [robot7.controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[component_container_isolated-7] [INFO] [1781848212.257756244] [robot7.controller_server]: Setting transform_tolerance to 0.200000
+[component_container_isolated-7] [INFO] [1781848212.263937943] [robot7.controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[component_container_isolated-7] [INFO] [1781848212.264374476] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.264475050] [robot7.controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[component_container_isolated-7] [INFO] [1781848212.264841809] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.264965988] [robot7.controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[component_container_isolated-7] [INFO] [1781848212.265164041] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.265284934] [robot7.controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[component_container_isolated-7] [INFO] [1781848212.265609080] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.265707881] [robot7.controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[component_container_isolated-7] [INFO] [1781848212.265956592] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.266046916] [robot7.controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[component_container_isolated-7] [INFO] [1781848212.266240861] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.266325775] [robot7.controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[component_container_isolated-7] [INFO] [1781848212.266532434] [robot7.controller_server]: Critic plugin initialized
+[component_container_isolated-7] [INFO] [1781848212.266547743] [robot7.controller_server]: Controller Server has FollowPath  controllers available.
+[component_container_isolated-7] [INFO] [1781848212.269417756] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.269511567] [robot7.smoother_server]: Configuring smoother server
+[component_container_isolated-7] [INFO] [1781848212.272087993] [robot7.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[component_container_isolated-7] [INFO] [1781848212.272575745] [robot7.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[component_container_isolated-7] [INFO] [1781848212.274195193] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.274276820] [robot7.planner_server]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.274304614] [robot7.global_costmap.global_costmap]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.276025778] [robot7.global_costmap.global_costmap]: Using plugin "static_layer"
+[component_container_isolated-7] [INFO] [1781848212.277041369] [robot7.global_costmap.global_costmap]: Subscribing to the map topic (/robot7/map) with transient local durability
+[component_container_isolated-7] [INFO] [1781848212.277272826] [robot7.global_costmap.global_costmap]: Initialized plugin "static_layer"
+[component_container_isolated-7] [INFO] [1781848212.277282956] [robot7.global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[component_container_isolated-7] [INFO] [1781848212.277714580] [robot7.global_costmap.global_costmap]: Subscribed to Topics: scan
+[component_container_isolated-7] [INFO] [1781848212.279208044] [robot7.global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[component_container_isolated-7] [INFO] [1781848212.279225237] [robot7.global_costmap.global_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-7] [INFO] [1781848212.279645829] [robot7.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-7] [INFO] [1781848212.284661977] [robot7.global_costmap.global_costmap]: StaticLayer: Resizing costmap to 1200 X 800 at 0.033883 m/pix
+[component_container_isolated-7] [INFO] [1781848212.285043915] [robot7.planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[component_container_isolated-7] [INFO] [1781848212.285072861] [robot7.planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[component_container_isolated-7] [INFO] [1781848212.286532459] [robot7.planner_server]: Planner Server has GridBased  planners available.
+[component_container_isolated-7] [INFO] [1781848212.289640963] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring route_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.289747449] [robot7.route_server]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.297422311] [robot7.route_server]: Created GraphFileLoader GeoJsonGraphFileLoader of type nav2_route::GeoJsonGraphFileLoader
+[component_container_isolated-7] [INFO] [1781848212.297444734] [robot7.route_server]: Configuring geojson graph file loader
+[component_container_isolated-7] [INFO] [1781848212.297451587] [robot7.route_server]: No graph file provided to load yet.
+[component_container_isolated-7] [INFO] [1781848212.300367539] [robot7.route_server]: Created edge cost function plugin DistanceScorer of type nav2_route::DistanceScorer
+[component_container_isolated-7] [INFO] [1781848212.300384843] [robot7.route_server]: Configuring distance scorer.
+[component_container_isolated-7] [INFO] [1781848212.300560802] [robot7.route_server]: Created edge cost function plugin DynamicEdgesScorer of type nav2_route::DynamicEdgesScorer
+[component_container_isolated-7] [INFO] [1781848212.300578477] [robot7.route_server]: Configuring adjust edges scorer.
+[component_container_isolated-7] [INFO] [1781848212.303612306] [robot7.route_server]: Created route operation AdjustSpeedLimit of type nav2_route::AdjustSpeedLimit
+[component_container_isolated-7] [INFO] [1781848212.303628297] [robot7.route_server]: Configuring Adjust speed limit operation.
+[component_container_isolated-7] [INFO] [1781848212.304047837] [robot7.route_server]: Created route operation ReroutingService of type nav2_route::ReroutingService
+[component_container_isolated-7] [INFO] [1781848212.304058878] [robot7.route_server]: Configuring Rerouting service operation.
+[component_container_isolated-7] [INFO] [1781848212.304947865] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.305038119] [robot7.behavior_server]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.306116742] [robot7.behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[component_container_isolated-7] [INFO] [1781848212.307306991] [robot7.behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[component_container_isolated-7] [INFO] [1781848212.308115763] [robot7.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[component_container_isolated-7] [INFO] [1781848212.308947860] [robot7.behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[component_container_isolated-7] [INFO] [1781848212.310229065] [robot7.behavior_server]: Configuring spin
+[component_container_isolated-7] [INFO] [1781848212.312057656] [robot7.behavior_server]: Configuring backup
+[component_container_isolated-7] [INFO] [1781848212.313535129] [robot7.behavior_server]: Configuring drive_on_heading
+[component_container_isolated-7] [INFO] [1781848212.314623952] [robot7.behavior_server]: Configuring wait
+[component_container_isolated-7] [INFO] [1781848212.316301622] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.316444488] [robot7.velocity_smoother]: Configuring velocity smoother
+[component_container_isolated-7] [INFO] [1781848212.318142037] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.318242240] [robot7.collision_monitor]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.320265698] [collision_monitor]: [scan]: Creating Scan
+[component_container_isolated-7] [INFO] [1781848212.320941543] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[component_container_isolated-7] [INFO] [1781848212.321388416] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[component_container_isolated-7] [INFO] [1781848212.322438625] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on local_costmap/published_footprint topic
+[component_container_isolated-7] [INFO] [1781848212.324313806] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.324391947] [robot7.bt_navigator]: Configuring
+[INFO] [create-5]: process has finished cleanly [pid 32484]
+[component_container_isolated-7] [INFO] [1781848212.325902184] [robot7.bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[component_container_isolated-7] [INFO] [1781848212.368446169] [robot7.bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[component_container_isolated-7] [INFO] [1781848212.379359305] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.379479377] [robot7.waypoint_follower]: Configuring
+[component_container_isolated-7] [INFO] [1781848212.385036489] [robot7.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[component_container_isolated-7] [INFO] [1781848212.385519051] [robot7.lifecycle_manager_navigation]: [34m[1mConfiguring docking_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.385594357] [robot7.docking_server]: Configuring docking_server
+[component_container_isolated-7] [INFO] [1781848212.385626679] [robot7.docking_server]: Controller frequency set to 50.0000Hz
+[component_container_isolated-7] [INFO] [1781848212.393797650] [robot7.docking_server]: Created charging dock plugin simple_charging_dock of type opennav_docking::SimpleChargingDock
+[component_container_isolated-7] [INFO] [1781848212.396647574] [robot7.docking_server]: Loading docks from parameter file.
+[component_container_isolated-7] [INFO] [1781848212.397062535] [robot7.docking_server]: Docking Server has 1 dock types and 1 dock instances available.
+[component_container_isolated-7] [INFO] [1781848212.397820369] [robot7.lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848212.397990367] [robot7.controller_server]: Activating
+[component_container_isolated-7] [INFO] [1781848212.398032168] [robot7.local_costmap.local_costmap]: Activating
+[component_container_isolated-7] [INFO] [1781848212.398047307] [robot7.local_costmap.local_costmap]: Checking transform
+[component_container_isolated-7] [INFO] [1781848212.398091532] [robot7.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[component_container_isolated-7] [INFO] [1781848212.898101916] [robot7.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[parameter_bridge-4] [INFO] [1781848212.916080278] [robot7.ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1781848212.917412120] [robot7.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot7/joint_states (gz.msgs.Model) -> joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1781848212.919485474] [robot7.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot7/odom (gz.msgs.Odometry) -> odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1781848212.920549399] [robot7.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot7/tf (gz.msgs.Pose_V) -> tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1781848212.921640717] [robot7.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot7/imu (gz.msgs.IMU) -> imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1781848212.922148507] [robot7.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot7/scan (gz.msgs.LaserScan) -> scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-4] [INFO] [1781848212.922620699] [robot7.ros_gz_bridge]: Creating ROS->GZ Bridge: [cmd_vel (geometry_msgs/msg/Twist) -> /robot7/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[component_container_isolated-7] [INFO] [1781848213.398153259] [robot7.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L49]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L134]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L361]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[component_container_isolated-7] [INFO] [1781848213.898119289] [robot7.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[component_container_isolated-7] [INFO] [1781848214.167758977] [robot7.amcl]: createLaserObject
+[component_container_isolated-7] [INFO] [1781848214.398248413] [robot7.local_costmap.local_costmap]: start
+[component_container_isolated-7] [INFO] [1781848214.649024585] [robot7.controller_server]: Creating bond (controller_server) to lifecycle manager.
+[component_container_isolated-7] [INFO] [1781848214.752953526] [robot7.lifecycle_manager_navigation]: Server controller_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848214.753021006] [robot7.lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848214.753338540] [robot7.smoother_server]: Activating
+[component_container_isolated-7] [INFO] [1781848214.753378336] [robot7.smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[component_container_isolated-7] [INFO] [1781848214.855231348] [robot7.lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848214.855300752] [robot7.lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848214.855648353] [robot7.planner_server]: Activating
+[component_container_isolated-7] [INFO] [1781848214.855702879] [robot7.global_costmap.global_costmap]: Activating
+[component_container_isolated-7] [INFO] [1781848214.855715824] [robot7.global_costmap.global_costmap]: Checking transform
+[component_container_isolated-7] [INFO] [1781848214.855761071] [robot7.global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 0.880000 but the earliest data is at time 1.200000, when looking up transform from frame [base_link] to frame [map]
+[INFO] [launch.user]: Launching robot1
+[INFO] [launch.user]: robot1 map yaml: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/test_config.yaml
+[INFO] [launch.user]: robot1 params yaml: /home/alvo/test_ws/install/main_simulation/share/main_simulation/params/nav2_multirobot_params_template.yaml
+[INFO] [launch.user]: robot1 rviz config file: /home/alvo/test_ws/install/main_simulation/share/main_simulation/rviz/nav2_namespaced_view.rviz
+[INFO] [launch.user]: robot1 using robot state pub: True
+[INFO] [launch.user]: robot1 autostart: True
+[component_container_isolated-7] [INFO] [1781848215.355887414] [robot7.global_costmap.global_costmap]: start
+[component_container_isolated-7] [INFO] [1781848215.606679548] [robot7.planner_server]: Activating plugin GridBased of type NavfnPlanner
+[component_container_isolated-7] [INFO] [1781848215.607726129] [robot7.planner_server]: Creating bond (planner_server) to lifecycle manager.
+[component_container_isolated-7] [INFO] [1781848215.709353066] [robot7.lifecycle_manager_navigation]: Server planner_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848215.709409616] [robot7.lifecycle_manager_navigation]: [34m[1mActivating route_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848215.709755995] [robot7.route_server]: Activating
+[component_container_isolated-7] [INFO] [1781848215.709927035] [robot7.route_server]: Creating bond (route_server) to lifecycle manager.
+[component_container_isolated-7] [INFO] [1781848215.811926592] [robot7.lifecycle_manager_navigation]: Server route_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848215.811983982] [robot7.lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[component_container_isolated-7] [INFO] [1781848215.812257100] [robot7.behavior_server]: Activating
+[component_container_isolated-7] [INFO] [1781848215.812278461] [robot7.behavior_server]: Activating spin
+[component_container_isolated-7] [INFO] [1781848215.812301496] [robot7.behavior_server]: Activating backup
+[component_container_isolated-7] [INFO] [1781848215.812315052] [robot7.behavior_server]: Activating drive_on_heading
+[component_container_isolated-7] [INFO] [1781848215.812328117] [robot7.behavior_server]: Activating wait
+[component_container_isolated-7] [INFO] [1781848215.812344729] [robot7.behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[INFO] [xacro-8]: process started with pid [32859]
+[INFO] [parameter_bridge-9]: process started with pid [32860]
+[INFO] [create-10]: process started with pid [32861]
+[INFO] [robot_state_publisher-11]: process started with pid [32862]
+[INFO] [component_container_isolated-12]: process started with pid [32863]
+[component_container_isolated-7] [INFO] [1781848215.913808692] [robot7.lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848215.913868908] [robot7.lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[component_container_isolated-7] [INFO] [1781848215.914158527] [robot7.velocity_smoother]: Activating
+[component_container_isolated-7] [INFO] [1781848215.914238662] [robot7.velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[robot_state_publisher-11] [INFO] [1781848215.942223763] [robot1.robot_state_publisher]: Robot initialized
+[create-10] [INFO] [1781848215.947488499] [robot1.ros_gz_sim]: Requesting list of world names.
+[component_container_isolated-7] [INFO] [1781848216.016629914] [robot7.lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[component_container_isolated-7] [INFO] [1781848216.016728805] [robot7.lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[component_container_isolated-7] [INFO] [1781848216.017024165] [robot7.collision_monitor]: Activating
+[component_container_isolated-7] [INFO] [1781848216.017096365] [robot7.collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[INFO] [xacro-8]: process has finished cleanly [pid 32859]
+[component_container_isolated-7] [INFO] [1781848216.119191799] [robot7.lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[component_container_isolated-7] [INFO] [1781848216.119245453] [robot7.lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[component_container_isolated-7] [INFO] [1781848216.119568747] [robot7.bt_navigator]: Activating
+[component_container_isolated-7] [INFO] [1781848216.146410448] [robot7.bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848216.146793828] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libcontroller_server_core.so
+[create-10] [INFO] [1781848216.149163554] [robot1.ros_gz_sim]: Entity creation successful.
+[component_container_isolated-12] [INFO] [1781848216.160730429] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-12] [INFO] [1781848216.160785425] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-12] [INFO] [1781848216.168625144] [robot1.controller_server]: 
+[component_container_isolated-12] 	controller_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L49]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L134]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-2] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L361]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[component_container_isolated-12] [INFO] [1781848216.185920871] [robot1.controller_server]: Creating controller server
+[component_container_isolated-12] [INFO] [1781848216.192607203] [robot1.local_costmap.local_costmap]: 
+[component_container_isolated-12] 	local_costmap lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.194582607] [robot1.local_costmap.local_costmap]: Creating Costmap
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/controller_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.197392443] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libmap_server_core.so
+[component_container_isolated-12] [INFO] [1781848216.212217600] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>
+[component_container_isolated-12] [INFO] [1781848216.212316691] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>
+[component_container_isolated-12] [INFO] [1781848216.212332422] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-12] [INFO] [1781848216.212339926] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-12] [INFO] [1781848216.219604714] [robot1.map_server]: 
+[component_container_isolated-12] 	map_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.219681412] [robot1.map_server]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/map_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.220788410] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libamcl_core.so
+[component_container_isolated-12] [INFO] [1781848216.223678080] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-12] [INFO] [1781848216.223709510] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-12] [INFO] [1781848216.229935543] [robot1.amcl]: 
+[component_container_isolated-12] 	amcl lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.231822787] [robot1.amcl]: Creating
+[component_container_isolated-12] [INFO] [1781848216.236726937] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libsmoother_server_core.so
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/amcl' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.239186456] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-12] [INFO] [1781848216.239213288] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-12] [INFO] [1781848216.246026744] [robot1.smoother_server]: 
+[component_container_isolated-12] 	smoother_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848216.248002720] [robot7.lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[component_container_isolated-7] [INFO] [1781848216.248058107] [robot7.lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[component_container_isolated-7] [INFO] [1781848216.248366332] [robot7.waypoint_follower]: Activating
+[component_container_isolated-7] [INFO] [1781848216.248409676] [robot7.waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848216.252747813] [robot1.smoother_server]: Creating smoother server
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/smoother_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.254031261] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libnav2_lifecycle_manager_core.so
+[component_container_isolated-12] [INFO] [1781848216.255469959] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-12] [INFO] [1781848216.255491551] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-12] [INFO] [1781848216.261795333] [robot1.lifecycle_manager_localization]: Creating
+[component_container_isolated-12] [INFO] [1781848216.267222824] [robot1.lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/lifecycle_manager_localization' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.267804457] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libplanner_server_core.so
+[component_container_isolated-12] [INFO] [1781848216.268744933] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-12] [INFO] [1781848216.268760192] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-12] [INFO] [1781848216.269638088] [robot1.lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.269677524] [robot1.lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.269887098] [robot1.map_server]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.269955791] [map_io]: Loading yaml file: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/test_config.yaml
+[component_container_isolated-12] [INFO] [1781848216.270269787] [map_io]: resolution: 0.0338831
+[component_container_isolated-12] [INFO] [1781848216.270286460] [map_io]: origin[0]: 0
+[component_container_isolated-12] [INFO] [1781848216.270295667] [map_io]: origin[1]: -27.1065
+[component_container_isolated-12] [INFO] [1781848216.270300417] [map_io]: origin[2]: 0
+[component_container_isolated-12] [INFO] [1781848216.270305937] [map_io]: free_thresh: 0.196
+[component_container_isolated-12] [INFO] [1781848216.270311288] [map_io]: occupied_thresh: 0.65
+[component_container_isolated-12] [INFO] [1781848216.270318812] [map_io]: mode: trinary
+[component_container_isolated-12] [INFO] [1781848216.270323591] [map_io]: negate: 0
+[component_container_isolated-12] [INFO] [1781848216.270549237] [map_io]: Loading image_file: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/../assets/test.png
+[component_container_isolated-12] [INFO] [1781848216.275131355] [robot1.planner_server]: 
+[component_container_isolated-12] 	planner_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.282398848] [robot1.planner_server]: Creating
+[component_container_isolated-12] [INFO] [1781848216.291819249] [robot1.global_costmap.global_costmap]: 
+[component_container_isolated-12] 	global_costmap lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.293667398] [robot1.global_costmap.global_costmap]: Creating Costmap
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/planner_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.299706138] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libroute_server_core.so
+[component_container_isolated-12] [INFO] [1781848216.302243678] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_route::RouteServer>
+[component_container_isolated-12] [INFO] [1781848216.302292122] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_route::RouteServer>
+[INFO] [create-10]: process has finished cleanly [pid 32861]
+[component_container_isolated-12] [INFO] [1781848216.313740909] [robot1.route_server]: 
+[component_container_isolated-12] 	route_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/route_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.318035863] [map_io]: Read map /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/../assets/test.png: 1200 X 800 map @ 0.0338831 m/cell
+[component_container_isolated-12] [INFO] [1781848216.318881355] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libbehavior_server_core.so
+[component_container_isolated-12] [INFO] [1781848216.321289305] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-12] [INFO] [1781848216.321325936] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-12] [INFO] [1781848216.323257696] [robot1.lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.323374271] [robot1.amcl]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.323481428] [robot1.amcl]: initTransforms
+[component_container_isolated-12] [INFO] [1781848216.328529576] [robot1.amcl]: initPubSub
+[component_container_isolated-12] [INFO] [1781848216.329124595] [robot1.behavior_server]: 
+[component_container_isolated-12] 	behavior_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.329701028] [robot1.amcl]: Subscribed to map topic.
+[component_container_isolated-12] [INFO] [1781848216.331735557] [robot1.lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.331843335] [robot1.map_server]: Activating
+[component_container_isolated-12] [INFO] [1781848216.332099860] [robot1.map_server]: Creating bond (map_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848216.332645554] [robot1.amcl]: Received a 1200 X 800 map @ 0.034 m/pix
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/behavior_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.338547460] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libbt_navigator_core.so
+[component_container_isolated-12] [INFO] [1781848216.343542666] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-12] [INFO] [1781848216.343588444] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-7] [INFO] [1781848216.350474220] [robot7.lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[component_container_isolated-7] [INFO] [1781848216.350521221] [robot7.lifecycle_manager_navigation]: [34m[1mActivating docking_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.350664528] [robot1.bt_navigator]: 
+[component_container_isolated-12] 	bt_navigator lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-7] [INFO] [1781848216.350860396] [robot7.docking_server]: Activating docking_server
+[component_container_isolated-7] [INFO] [1781848216.355049696] [robot7.docking_server]: Creating bond (docking_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848216.357547639] [robot1.bt_navigator]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/bt_navigator' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.359778327] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libwaypoint_follower_core.so
+[component_container_isolated-12] [INFO] [1781848216.361312349] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-12] [INFO] [1781848216.361334501] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-12] [INFO] [1781848216.367264983] [robot1.waypoint_follower]: 
+[component_container_isolated-12] 	waypoint_follower lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.369153610] [robot1.waypoint_follower]: Creating
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/waypoint_follower' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.371580236] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libvelocity_smoother_core.so
+[component_container_isolated-12] [INFO] [1781848216.372544628] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-12] [INFO] [1781848216.372557212] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-12] [INFO] [1781848216.378625149] [robot1.velocity_smoother]: 
+[component_container_isolated-12] 	velocity_smoother lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/velocity_smoother' in container 'robot1/nav2_container'
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.381956392] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libcollision_monitor_core.so
+[component_container_isolated-12] [INFO] [1781848216.384659051] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_collision_monitor::CollisionMonitor>
+[component_container_isolated-12] [INFO] [1781848216.384679440] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_collision_monitor::CollisionMonitor>
+[component_container_isolated-12] [INFO] [1781848216.390467937] [robot1.collision_monitor]: 
+[component_container_isolated-12] 	collision_monitor lifecycle node launched. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/collision_monitor' in container 'robot1/nav2_container'
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.393546532] [robot1.nav2_container]: Load Library: /opt/ros/jazzy/lib/libopennav_docking_core.so
+[component_container_isolated-12] [INFO] [1781848216.395337861] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<opennav_docking::DockingServer>
+[component_container_isolated-12] [INFO] [1781848216.395354814] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<opennav_docking::DockingServer>
+[component_container_isolated-12] [INFO] [1781848216.401880836] [robot1.docking_server]: 
+[component_container_isolated-12] 	docking_server lifecycle node launched. 
+[component_container_isolated-12] 	Waiting on external lifecycle transitions to activate
+[component_container_isolated-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[component_container_isolated-12] [INFO] [1781848216.401959317] [robot1.docking_server]: Creating docking_server
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/docking_server' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.405328393] [robot1.nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-12] [INFO] [1781848216.405350065] [robot1.nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-12] [INFO] [1781848216.410930480] [robot1.lifecycle_manager_navigation]: Creating
+[component_container_isolated-12] [INFO] [1781848216.412536231] [robot1.lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot1/lifecycle_manager_navigation' in container 'robot1/nav2_container'
+[component_container_isolated-12] [INFO] [1781848216.419520988] [robot1.lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.419602446] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.419780850] [robot1.controller_server]: Configuring controller interface
+[component_container_isolated-12] [INFO] [1781848216.419806820] [robot1.controller_server]: getting progress checker plugins..
+[component_container_isolated-12] [INFO] [1781848216.420106168] [robot1.controller_server]: getting goal checker plugins..
+[component_container_isolated-12] [INFO] [1781848216.420387602] [robot1.controller_server]: Controller frequency set to 20.0000Hz
+[component_container_isolated-12] [INFO] [1781848216.420446616] [robot1.local_costmap.local_costmap]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.423379910] [robot1.local_costmap.local_costmap]: Using plugin "voxel_layer"
+[component_container_isolated-12] [INFO] [1781848216.426904325] [robot1.local_costmap.local_costmap]: Subscribed to Topics: scan
+[component_container_isolated-12] [INFO] [1781848216.430297578] [robot1.local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[component_container_isolated-12] [INFO] [1781848216.430328197] [robot1.local_costmap.local_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-12] [INFO] [1781848216.431110187] [robot1.local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-12] [INFO] [1781848216.433860217] [robot1.lifecycle_manager_localization]: Server map_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848216.433895335] [robot1.lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.434275238] [robot1.amcl]: Activating
+[component_container_isolated-12] [INFO] [1781848216.434304295] [robot1.amcl]: initialPoseReceived
+[component_container_isolated-12] [INFO] [1781848216.434421551] [robot1.amcl]: Setting pose (2.330000): 23.100 -4.000 -0.416
+[component_container_isolated-12] [INFO] [1781848216.434841983] [robot1.amcl]: Creating bond (amcl) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848216.438609227] [robot1.controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[component_container_isolated-12] [INFO] [1781848216.439156234] [robot1.controller_server]: Controller Server has progress_checker  progress checkers available.
+[component_container_isolated-12] [INFO] [1781848216.440008660] [robot1.controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[component_container_isolated-12] [INFO] [1781848216.440600843] [robot1.controller_server]: Controller Server has goal_checker  goal checkers available.
+[component_container_isolated-12] [INFO] [1781848216.445670993] [robot1.controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[component_container_isolated-12] [INFO] [1781848216.447293346] [robot1.controller_server]: Setting transform_tolerance to 0.200000
+[component_container_isolated-7] [INFO] [1781848216.457017734] [robot7.lifecycle_manager_navigation]: Server docking_server connected with bond.
+[component_container_isolated-7] [INFO] [1781848216.457073241] [robot7.lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-7] [INFO] [1781848216.457083551] [robot7.lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.458036240] [robot1.controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[component_container_isolated-12] [INFO] [1781848216.458758505] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.458903435] [robot1.controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[component_container_isolated-12] [INFO] [1781848216.459460220] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.459579991] [robot1.controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[component_container_isolated-12] [INFO] [1781848216.459816999] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.459970335] [robot1.controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[component_container_isolated-12] [INFO] [1781848216.460395977] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.460526900] [robot1.controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[component_container_isolated-12] [INFO] [1781848216.460939206] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.461500169] [robot1.controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[component_container_isolated-12] [INFO] [1781848216.461871286] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.462036866] [robot1.controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[component_container_isolated-12] [INFO] [1781848216.462349389] [robot1.controller_server]: Critic plugin initialized
+[component_container_isolated-12] [INFO] [1781848216.462369027] [robot1.controller_server]: Controller Server has FollowPath  controllers available.
+[component_container_isolated-12] [INFO] [1781848216.466621569] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.466775335] [robot1.smoother_server]: Configuring smoother server
+[component_container_isolated-12] [INFO] [1781848216.471401499] [robot1.smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[component_container_isolated-12] [INFO] [1781848216.472234417] [robot1.smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[component_container_isolated-12] [INFO] [1781848216.474611627] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.474725858] [robot1.planner_server]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.474761166] [robot1.global_costmap.global_costmap]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.477349324] [robot1.global_costmap.global_costmap]: Using plugin "static_layer"
+[component_container_isolated-12] [INFO] [1781848216.479572567] [robot1.global_costmap.global_costmap]: Subscribing to the map topic (/robot1/map) with transient local durability
+[component_container_isolated-12] [INFO] [1781848216.480025481] [robot1.global_costmap.global_costmap]: Initialized plugin "static_layer"
+[component_container_isolated-12] [INFO] [1781848216.480042634] [robot1.global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[component_container_isolated-12] [INFO] [1781848216.480977730] [robot1.global_costmap.global_costmap]: Subscribed to Topics: scan
+[component_container_isolated-12] [INFO] [1781848216.484593632] [robot1.global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[component_container_isolated-12] [INFO] [1781848216.484626355] [robot1.global_costmap.global_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-12] [INFO] [1781848216.485335294] [robot1.global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-12] [INFO] [1781848216.492352995] [robot1.global_costmap.global_costmap]: StaticLayer: Resizing costmap to 1200 X 800 at 0.033883 m/pix
+[component_container_isolated-12] [INFO] [1781848216.492734642] [robot1.planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[component_container_isolated-12] [INFO] [1781848216.492758559] [robot1.planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[component_container_isolated-12] [INFO] [1781848216.494351404] [robot1.planner_server]: Planner Server has GridBased  planners available.
+[component_container_isolated-12] [INFO] [1781848216.498828039] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring route_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.499037283] [robot1.route_server]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.511101158] [robot1.route_server]: Created GraphFileLoader GeoJsonGraphFileLoader of type nav2_route::GeoJsonGraphFileLoader
+[component_container_isolated-12] [INFO] [1781848216.511137828] [robot1.route_server]: Configuring geojson graph file loader
+[component_container_isolated-12] [INFO] [1781848216.511151896] [robot1.route_server]: No graph file provided to load yet.
+[component_container_isolated-12] [INFO] [1781848216.515633900] [robot1.route_server]: Created edge cost function plugin DistanceScorer of type nav2_route::DistanceScorer
+[component_container_isolated-12] [INFO] [1781848216.515670261] [robot1.route_server]: Configuring distance scorer.
+[component_container_isolated-12] [INFO] [1781848216.516048371] [robot1.route_server]: Created edge cost function plugin DynamicEdgesScorer of type nav2_route::DynamicEdgesScorer
+[component_container_isolated-12] [INFO] [1781848216.516074181] [robot1.route_server]: Configuring adjust edges scorer.
+[component_container_isolated-12] [INFO] [1781848216.519989792] [robot1.route_server]: Created route operation AdjustSpeedLimit of type nav2_route::AdjustSpeedLimit
+[component_container_isolated-12] [INFO] [1781848216.520014209] [robot1.route_server]: Configuring Adjust speed limit operation.
+[component_container_isolated-12] [INFO] [1781848216.520645628] [robot1.route_server]: Created route operation ReroutingService of type nav2_route::ReroutingService
+[component_container_isolated-12] [INFO] [1781848216.520666558] [robot1.route_server]: Configuring Rerouting service operation.
+[component_container_isolated-12] [INFO] [1781848216.521923095] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.522046132] [robot1.behavior_server]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.524106871] [robot1.behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[component_container_isolated-12] [INFO] [1781848216.525685219] [robot1.behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[component_container_isolated-12] [INFO] [1781848216.526787167] [robot1.behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[component_container_isolated-12] [INFO] [1781848216.527805804] [robot1.behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[component_container_isolated-12] [INFO] [1781848216.529530314] [robot1.behavior_server]: Configuring spin
+[component_container_isolated-12] [INFO] [1781848216.532508986] [robot1.behavior_server]: Configuring backup
+[component_container_isolated-12] [INFO] [1781848216.534132972] [robot1.behavior_server]: Configuring drive_on_heading
+[component_container_isolated-12] [INFO] [1781848216.535600596] [robot1.behavior_server]: Configuring wait
+[component_container_isolated-12] [INFO] [1781848216.536377696] [robot1.lifecycle_manager_localization]: Server amcl connected with bond.
+[component_container_isolated-12] [INFO] [1781848216.536433614] [robot1.lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.536451158] [robot1.lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.537659441] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.537862784] [robot1.velocity_smoother]: Configuring velocity smoother
+[component_container_isolated-12] [INFO] [1781848216.541312295] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring collision_monitor[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.541449981] [robot1.collision_monitor]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.545135998] [collision_monitor]: [scan]: Creating Scan
+[component_container_isolated-12] [INFO] [1781848216.546357266] [collision_monitor]: [FootprintApproach]: Creating Polygon
+[component_container_isolated-12] [INFO] [1781848216.546577903] [collision_monitor]: [FootprintApproach]: Polygon points are not defined. Using dynamic subscription instead.
+[component_container_isolated-12] [INFO] [1781848216.547795474] [collision_monitor]: [FootprintApproach]: Making footprint subscriber on local_costmap/published_footprint topic
+[component_container_isolated-12] [INFO] [1781848216.551249333] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.551410063] [robot1.bt_navigator]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.553899631] [robot1.bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[component_container_isolated-12] [INFO] [1781848216.617097995] [robot1.bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[component_container_isolated-12] [INFO] [1781848216.634841548] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.634994994] [robot1.waypoint_follower]: Configuring
+[component_container_isolated-12] [INFO] [1781848216.641907171] [robot1.waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[component_container_isolated-12] [INFO] [1781848216.642679232] [robot1.lifecycle_manager_navigation]: [34m[1mConfiguring docking_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.642789215] [robot1.docking_server]: Configuring docking_server
+[component_container_isolated-12] [INFO] [1781848216.642830414] [robot1.docking_server]: Controller frequency set to 50.0000Hz
+[component_container_isolated-12] [INFO] [1781848216.655628066] [robot1.docking_server]: Created charging dock plugin simple_charging_dock of type opennav_docking::SimpleChargingDock
+[component_container_isolated-12] [INFO] [1781848216.659750086] [robot1.docking_server]: Loading docks from parameter file.
+[component_container_isolated-12] [INFO] [1781848216.660351427] [robot1.docking_server]: Docking Server has 1 dock types and 1 dock instances available.
+[component_container_isolated-12] [INFO] [1781848216.661363691] [robot1.lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848216.661526155] [robot1.controller_server]: Activating
+[component_container_isolated-12] [INFO] [1781848216.661567044] [robot1.local_costmap.local_costmap]: Activating
+[component_container_isolated-12] [INFO] [1781848216.661581312] [robot1.local_costmap.local_costmap]: Checking transform
+[component_container_isolated-12] [INFO] [1781848216.661621339] [robot1.local_costmap.local_costmap]: Timed out waiting for transform from base_link to odom to become available, tf error: Invalid frame ID "odom" passed to canTransform argument target_frame - frame does not exist
+[parameter_bridge-9] [INFO] [1781848216.971984614] [robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1781848216.973871708] [robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/joint_states (gz.msgs.Model) -> joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1781848216.976341547] [robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/odom (gz.msgs.Odometry) -> odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1781848216.977943481] [robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/tf (gz.msgs.Pose_V) -> tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1781848216.979879248] [robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/imu (gz.msgs.IMU) -> imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1781848216.980765780] [robot1.ros_gz_bridge]: Creating GZ->ROS Bridge: [/robot1/scan (gz.msgs.LaserScan) -> scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-9] [INFO] [1781848216.982201412] [robot1.ros_gz_bridge]: Creating ROS->GZ Bridge: [cmd_vel (geometry_msgs/msg/Twist) -> /robot1/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[component_container_isolated-12] [INFO] [1781848217.105370782] [robot1.amcl]: createLaserObject
+[component_container_isolated-12] [INFO] [1781848217.161854386] [robot1.local_costmap.local_costmap]: start
+[component_container_isolated-12] [INFO] [1781848217.362529150] [robot1.controller_server]: Creating bond (controller_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848217.465087951] [robot1.lifecycle_manager_navigation]: Server controller_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848217.465129641] [robot1.lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848217.465509154] [robot1.smoother_server]: Activating
+[component_container_isolated-12] [INFO] [1781848217.465565493] [robot1.smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848217.567950278] [robot1.lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848217.568016866] [robot1.lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848217.568488046] [robot1.planner_server]: Activating
+[component_container_isolated-12] [INFO] [1781848217.568530378] [robot1.global_costmap.global_costmap]: Activating
+[component_container_isolated-12] [INFO] [1781848217.568544635] [robot1.global_costmap.global_costmap]: Checking transform
+[component_container_isolated-12] [INFO] [1781848217.568581176] [robot1.global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 3.440000 but the earliest data is at time 4.000000, when looking up transform from frame [base_link] to frame [map]
+[component_container_isolated-12] [INFO] [1781848218.068646949] [robot1.global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 3.960000 but the earliest data is at time 4.000000, when looking up transform from frame [base_link] to frame [map]
+[component_container_isolated-12] [INFO] [1781848218.568743267] [robot1.global_costmap.global_costmap]: start
+[component_container_isolated-12] [INFO] [1781848218.819706083] [robot1.planner_server]: Activating plugin GridBased of type NavfnPlanner
+[component_container_isolated-12] [INFO] [1781848218.820674803] [robot1.planner_server]: Creating bond (planner_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848218.922688153] [robot1.lifecycle_manager_navigation]: Server planner_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848218.922733050] [robot1.lifecycle_manager_navigation]: [34m[1mActivating route_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848218.923033911] [robot1.route_server]: Activating
+[component_container_isolated-12] [INFO] [1781848218.923138272] [robot1.route_server]: Creating bond (route_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.024729165] [robot1.lifecycle_manager_navigation]: Server route_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.024788990] [robot1.lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.025245121] [robot1.behavior_server]: Activating
+[component_container_isolated-12] [INFO] [1781848219.025274708] [robot1.behavior_server]: Activating spin
+[component_container_isolated-12] [INFO] [1781848219.025320847] [robot1.behavior_server]: Activating backup
+[component_container_isolated-12] [INFO] [1781848219.025337359] [robot1.behavior_server]: Activating drive_on_heading
+[component_container_isolated-12] [INFO] [1781848219.025352508] [robot1.behavior_server]: Activating wait
+[component_container_isolated-12] [INFO] [1781848219.025367637] [robot1.behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.129329962] [robot1.lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.129376332] [robot1.lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.129844296] [robot1.velocity_smoother]: Activating
+[component_container_isolated-12] [INFO] [1781848219.129923128] [robot1.velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.231932492] [robot1.lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.231982799] [robot1.lifecycle_manager_navigation]: [34m[1mActivating collision_monitor[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.232402820] [robot1.collision_monitor]: Activating
+[component_container_isolated-12] [INFO] [1781848219.232468758] [robot1.collision_monitor]: Creating bond (collision_monitor) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.334563407] [robot1.lifecycle_manager_navigation]: Server collision_monitor connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.334648301] [robot1.lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.335239502] [robot1.bt_navigator]: Activating
+[component_container_isolated-12] [INFO] [1781848219.363181812] [robot1.bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.464775073] [robot1.lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.464818917] [robot1.lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.465193541] [robot1.waypoint_follower]: Activating
+[component_container_isolated-12] [INFO] [1781848219.465234921] [robot1.waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.567855084] [robot1.lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.567953985] [robot1.lifecycle_manager_navigation]: [34m[1mActivating docking_server[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.568403583] [robot1.docking_server]: Activating docking_server
+[component_container_isolated-12] [INFO] [1781848219.573628802] [robot1.docking_server]: Creating bond (docking_server) to lifecycle manager.
+[component_container_isolated-12] [INFO] [1781848219.675281678] [robot1.lifecycle_manager_navigation]: Server docking_server connected with bond.
+[component_container_isolated-12] [INFO] [1781848219.675329300] [robot1.lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-12] [INFO] [1781848219.675345050] [robot1.lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
