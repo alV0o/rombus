@@ -1,25 +1,8 @@
-INFO:     Started server process [35777]
+INFO:     Started server process [26750]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
-INFO:     192.168.0.134:36048 - "GET /maps HTTP/1.1" 200 OK
-INFO:     192.168.0.134:36052 - "GET /coords/first_map HTTP/1.1" 200 OK
-INFO:     192.168.0.134:58184 - "GET /coords/warehouse HTTP/1.1" 200 OK
-INFO:     192.168.0.134:58196 - "GET /coords/fabric_map HTTP/1.1" 200 OK
-INFO:     192.168.0.134:58202 - "GET /coords/first_map HTTP/1.1" 200 OK
-INFO:     192.168.0.134:43300 - "GET /coords/test HTTP/1.1" 200 OK
-INFO:     192.168.0.134:43312 - "GET /coords/warehouse HTTP/1.1" 200 OK
-INFO:     192.168.0.134:60636 - "GET /maps HTTP/1.1" 200 OK
-INFO:     192.168.0.134:60648 - "GET /coords/first_map HTTP/1.1" 200 OK
-INFO:     192.168.0.134:45562 - "GET /coords/warehouse HTTP/1.1" 200 OK
-INFO:     192.168.0.134:60380 - "GET /maps HTTP/1.1" 200 OK
-INFO:     192.168.0.134:60394 - "GET /coords/first_map HTTP/1.1" 200 OK
-INFO:     192.168.0.134:60400 - "GET /coords/test HTTP/1.1" 200 OK
-INFO:     192.168.0.134:60410 - "GET /coords/warehouse HTTP/1.1" 200 OK
-INFO:     192.168.0.134:49686 - "GET /maps HTTP/1.1" 200 OK
-INFO:     192.168.0.134:49690 - "GET /coords/first_map HTTP/1.1" 200 OK
-INFO:     192.168.0.134:36074 - "GET /coords/warehouse HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [35777]
+INFO:     Finished server process [26750]

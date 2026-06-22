@@ -1,14 +1,12 @@
-Введите ID заказа: [INFO] [1781784316.037508061] [task_publisher]: Задача [1bc375d1-4054-4807-a951-655f4d46a842] отправлена
-[INFO] [1781784631.827773748] [task_publisher]: Задача [1bc375d1-4054-4807-a951-655f4d46a842] выполнена
-Добавлен таск с id 1bc375d1-4054-4807-a951-655f4d46a842
-Шаг [14] запущен
-Код статуса: [200]
-Код статуса: 200
+Введите ID заказа: [ERROR] [1782108477.125591012] [task_publisher]: Ошибка: HTTPConnectionPool(host='192.168.0.134', port=8000): Max retries exceeded with url: /api/v1/work-orders/12/batches (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a92db42bb30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[ERROR] [1782108481.983910476] [task_publisher]: Ошибка: HTTPConnectionPool(host='192.168.0.134', port=8000): Max retries exceeded with url: /api/v1/work-orders/12/batches (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a92cdb5bc20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[ERROR] [1782108486.998812836] [task_publisher]: Ошибка: HTTPConnectionPool(host='192.168.0.134', port=8000): Max retries exceeded with url: /api/v1/work-orders/12/batches (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a92cdba46b0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[ERROR] [1782108491.980345413] [task_publisher]: Ошибка: HTTPConnectionPool(host='192.168.0.134', port=8000): Max retries exceeded with url: /api/v1/work-orders/12/batches (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7a92cdba4da0>: Failed to establish a new connection: [Errno 111] Connection refused'))
 Traceback (most recent call last):
   File "/home/alvo/test_ws/install/mes_rmf_adapter/lib/mes_rmf_adapter/adapter", line 33, in <module>
-    sys.exit(load_entry_point('mes-rmf-adapter', 'console_scripts', 'adapter')())
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/alvo/test_ws/build/mes_rmf_adapter/mes_rmf_adapter/adapter_2.py", line 193, in main
+    sys.exit(load_entry_point('mes-rmf-adapter==0.0.0', 'console_scripts', 'adapter')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvo/test_ws/install/mes_rmf_adapter/lib/python3.12/site-packages/mes_rmf_adapter/adapter_2.py", line 193, in main
     rclpy.spin(node)
   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
     executor.spin_once()
@@ -20,6 +18,7 @@ Traceback (most recent call last):
   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 877, in wait_for_ready_callbacks
     return next(self._cb_iter)
            ^^^^^^^^^^^^^^^^^^^
-  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 785, in _wait_for_ready_callbacks
-    raise ExternalShutdownException()
-rclpy.executors.ExternalShutdownException
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 781, in _wait_for_ready_callbacks
+    wait_set.wait(timeout_nsec)
+KeyboardInterrupt
+[ros2run]: Interrupt

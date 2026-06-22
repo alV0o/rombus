@@ -1,34 +1,23 @@
+toggle_floors found a floor element: [L1]->[door_1]
 [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L92]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
 [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L162]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
 [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L411]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
 [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L92]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
 [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L162]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
 [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L411]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L92]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L162]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L411]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L92]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L162]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L411]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L92]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L162]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L411]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="imu_link"]/sensor[@name="tb3_imu"]/gz_frame_id:<data-string>:L92]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="base_scan"]/sensor[@name="hls_lfcd_lds"]/gz_frame_id:<data-string>:L162]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="turtlebot3_waffle"]/link[@name="camera_link"]/sensor[@name="intel_realsense_r200_depth"]/gz_frame_id:<data-string>:L411]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
-[INFO] [1781963320.791807671] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [1782109906.031339641] [rclcpp]: signal_handler(SIGINT/SIGTERM)
 terminate called after throwing an instance of 'rclcpp::exceptions::RCLError'
   what():  failed to create guard condition: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at ./src/rcl/guard_condition.c:67
-Stack trace (most recent call last) in thread 18683:
+Stack trace (most recent call last) in thread 29557:
 #10   Object "[0xffffffffffffffff]", at 0xffffffffffffffff, in 
-#9    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x73d92cf29c6b, in 
-#8    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x73d92ce9caa3, in 
-#7    Object "/lib/x86_64-linux-gnu/libQt5Core.so.5", at 0x73d9254920a6, in 
-#6    Object "/lib/x86_64-linux-gnu/libQt5Core.so.5", at 0x73d925490242, in qTerminate()
-#5    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x73d9276a5a54, in std::terminate()
-#4    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x73d9276bb0d9, in 
-#3    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x73d9276a5ff4, in 
-#2    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x73d92ce288fe, in abort
-#1    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x73d92ce4527d, in gsignal
-#0    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x73d92ce9eb2c, in pthread_kill
-Аварийный останов (Сигнал послан с помощью tkill() 18345 1000)
+#9    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x77f00e329c6b, in 
+#8    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x77f00e29caa3, in 
+#7    Object "/lib/x86_64-linux-gnu/libQt5Core.so.5", at 0x77f0066920a6, in 
+#6    Object "/lib/x86_64-linux-gnu/libQt5Core.so.5", at 0x77f006690242, in qTerminate()
+#5    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x77f0088a5a54, in std::terminate()
+#4    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x77f0088bb0d9, in 
+#3    Object "/lib/x86_64-linux-gnu/libstdc++.so.6", at 0x77f0088a5ff4, in 
+#2    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x77f00e2288fe, in abort
+#1    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x77f00e24527d, in gsignal
+#0    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x77f00e29eb2c, in pthread_kill
+Аварийный останов (Сигнал послан с помощью tkill() 29410 1000)
