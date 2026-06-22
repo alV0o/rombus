@@ -58,6 +58,19 @@ rmf_fleet:
         L1:
           map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
       initial_pose: [35.0, -4.0, 0.0]
+    robot4:
+      charger: dock_station_4
+      finishing_request:
+        type: charge
+        waypoint_name: dock_station_4
+      responsive_wait: false
+      navigation_stack: 2
+      init_timeout_sec: 5
+      initial_map: L1
+      maps:
+        L1:
+          map_url: /home/alvo/test_ws/install/test_building_maps/share/test_building_maps/configs/warehouse_config.yaml
+      initial_pose: [36.2, -5.3, 34.0]
   robot_state_update_frequency: 10.0 # Hz
 
 

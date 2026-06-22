@@ -38,7 +38,16 @@ def get_vertices(map_name:str):
             detail=str(e)
         )
 
+@app.get("/maps")
+def get_maps():
 
+    maps_path = Path(os.path.join(MAPS_DIR, 'maps'))
+    maps = []
+    for map in maps_path.iterdir():
+        if map.is_dir() and map.name != 'assets':
+            maps.append(map.name)
+
+    return maps
 
 def main():
     uvicorn.run(app, host="0.0.0.0", port=8080)

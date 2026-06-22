@@ -8,10 +8,12 @@ import add_robot
 import signal
 import time
 import sys
-from mes_rmf_adapter import update_arms
+import update_arms
+from pathlib import Path
 
 processes = {}
 log_files = {}
+LOG_DIR = Path(__file__).resolve().parent / ".." / "logs"
 def menu(answer):
 
     if processes.get(answer) != None:
@@ -40,7 +42,7 @@ def menu(answer):
             "stdbuf -oL -eL ros2 launch main_simulation multi_sim_launch.py"
         )
 
-        log_file = open("../logs/process_1_simulation.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/process_1_simulation.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen(
@@ -64,7 +66,7 @@ def menu(answer):
         return 0
 
     elif answer == 2:
-        log_file = open("../logs/process_2_gazebo.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/process_2_gazebo.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen(
@@ -90,7 +92,7 @@ def menu(answer):
         config_name = input('Введите название конфига для адаптера (default: turtlebot3_fleet_config.yaml): ')
         graph = input('Введите название файла графов (default: 0.yaml): ')
 
-        log_file = open("../logs/process_3_rmf.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/process_3_rmf.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen([
@@ -98,7 +100,7 @@ def menu(answer):
             'ros2', 'launch', 'lab_bringup', 'multi_real_launch.py', 
             f'map_name:={map_name}', f'server_uri:={server_uri}', 
             f'config_name:={config_name}', f'graph:={graph}'
-        ], stdout=log_file, stderr=subprocess.STDOUT, bufsize=0)
+        ], stdout=log_file, stderr=subprocess.STDOUT, bufsize=0, preexec_fn=os.setsid)
 
 
         processes[answer] = process
@@ -109,7 +111,7 @@ def menu(answer):
 
     elif answer == 4:
 
-        log_file = open("../logs/traffic-editor.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/traffic-editor.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen(
@@ -160,7 +162,7 @@ def menu(answer):
             f"stdbuf -oL -eL ros2 launch free_fleet_examples nav2_unique_multi_tb3_simulation_fleet_adapter.launch.xml  server_uri:={server_uri} map_name:={map_name} config_name:={config_name} graph:={graph}"
         )
         
-        log_file = open("../logs/process_6_adapter.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/process_6_adapter.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen(
@@ -200,7 +202,7 @@ def menu(answer):
             print(f"[Ошибка] Файл не найден по пути: {target_script}")
             return 1
 
-        log_file = open("../logs/process_7_translator.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/process_7_translator.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen(
@@ -218,7 +220,7 @@ def menu(answer):
         return 0
     
     elif answer == 8:
-        log_file = open("../logs/process_8_sim_mes_system.log", "w", encoding="utf-8")
+        log_file = open(f"{LOG_DIR}/process_8_sim_mes_system.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         commands_chain = (
@@ -250,47 +252,90 @@ def menu(answer):
         
 
 
-    elif answer in(9, 0):
+    elif answer in (9, 0):
+        print("Останавливаем ROS-демоны...")
+        try:
+            subprocess.run(['ros2', 'daemon', 'stop'], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=2)
+        except:
+            pass
+
+        # Собираем все дочерние PID *ДО* того, как начнем кого-то убивать
+        child_pids_map = {}
         for ans, proc in list(processes.items()):
             try:
-                # Если процесс запускался через bash -c (блоки 1 и 6), 
-                # нужно убить всю группу процессов, иначе bash умрет, а ROS-ноды останутся жить.
-                if ans in (1, 6, 8):
-                    os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+                if proc.poll() is None:
+                    # Ищем всех потомков (включая глубокую вложенность через -d ,)
+                    result = subprocess.run(
+                        ['pgrep', '-P', str(proc.pid)], 
+                        stdout=subprocess.PIPE, text=True, timeout=1
+                    )
+                    if result.stdout:
+                        child_pids_map[ans] = [int(pid) for pid in result.stdout.split()]
+            except:
+                pass
+
+        # 1. Первая волна: Мягкое завершение через SIGINT (Ctrl+C) — критично для ROS 2
+        print("Отправляем SIGINT (Ctrl+C) группам процессов...")
+        for ans, proc in list(processes.items()):
+            try:
+                if ans in (1, 3, 6, 8):
+                    pgid = os.getpgid(proc.pid)
+                    os.killpg(pgid, signal.SIGINT)  # ROS 2 поймает Ctrl+C и начнет тушить ноды
                 else:
                     proc.terminate()
-                
-                proc.wait(timeout=3)
             except Exception:
-                # Если мягко не закрылся — убиваем принудительно
-                try:
-                    if ans in (1, 6, 8):
-                        os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
+                pass
+
+        # Даем ROS 2 честные 4 секунды на разгрузку графов и закрытие адаптеров RMF
+        print("Ожидаем штатного завершения нод RMF...")
+        time.sleep(4)
+            
+        # 2. Вторая волна: Жесткое завершение (SIGKILL) тех, кто проигнорировал Ctrl+C
+        print("Принудительно очищаем зависшие группы процессов...")
+        for ans, proc in list(processes.items()):
+            try:
+                if proc.poll() is None: 
+                    if ans in (1, 3, 6, 8):
+                        pgid = os.getpgid(proc.pid)
+                        os.killpg(pgid, signal.SIGKILL)
                     else:
                         proc.kill()
-                except:
-                    pass
-            
-            # Закрываем дескриптор файла лога
-            if ans in log_files:
-                log_files[ans].close()
+                    proc.wait(timeout=1) 
+            except Exception:
+                pass
+
+        # 3. Третья волна: Добиваем сирот по сохраненным заранее PID
+        print("Финальная зачистка оторвавшихся дочерних процессов...")
+        for ans, pids in child_pids_map.items():
+            for child_pid in pids:
+                try:
+                    # Посылаем SIGKILL напрямую в PID, даже если их PPID теперь равен 1
+                    os.kill(child_pid, signal.SIGKILL)
+                except OSError:
+                    pass  # Процесс уже умер сам, это отлично
+
+        # 4. И только теперь закрываем логи, когда все процессы гарантированно мертвы
+        print("Закрываем файлы логирования...")
+        for ans, file_obj in list(log_files.items()):
+            try:
+                file_obj.close()
                 del log_files[ans]
-                
+            except:
+                pass
+
         processes.clear()
-        
         if answer == 9:
-            input('Все процессы успешно остановлены\n<Нажмите кнопку чтобы продолжить>\n ')
+            input('Все закрыто\n<Нажмите кнопку чтобы продолжить>\n ')
             return 0
         return 1
 
 
 
 
-
 def main(log_clear):
 
-    os.makedirs("../logs", exist_ok=True)
-    log_file = open("../logs/zenohd.log", "w", encoding="utf-8")
+    os.makedirs(LOG_DIR, exist_ok=True)
+    log_file = open(f"{LOG_DIR}/zenohd.log", "w", encoding="utf-8")
 
     start_zenohd = subprocess.Popen(
         ['zenohd'],

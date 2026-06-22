@@ -1,6 +1,6 @@
 import os
 import yaml
-from . import utils
+from mes_rmf_adapter import utils
 from ament_index_python import get_package_share_directory
 
 def main(map_name):
