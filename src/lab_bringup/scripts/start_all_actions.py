@@ -125,7 +125,15 @@ def menu(answer):
 
         print('Началась пересборка...')
      
-        ws_path = os.path.expanduser('~/test_ws')
+        # Пытаемся взять путь из активированного ROS-окружения
+        ws_path = os.environ.get("COLCON_PREFIX_PATH")
+
+        if ws_path:
+            # COLCON_PREFIX_PATH обычно ведет в ws/install, поэтому берем родительскую папку
+            ws_path = os.path.abspath(os.path.join(ws_path, ".."))
+        else:
+            # Фолбек: если окружение не активировано, берем текущую рабочую директорию терминала
+            ws_path = os.getcwd()
 
         colcon_process = subprocess.Popen([
             'colcon', 'build', '--packages-select', 'test_building_maps'
