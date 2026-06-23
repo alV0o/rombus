@@ -27,7 +27,8 @@ setup(
             'task_server = mes_rmf_adapter.adapter:main',
             'mock_server = mes_rmf_adapter.mock_server:main',
             'adapter = mes_rmf_adapter.adapter_2:main',
-            'start_adapter = mes_rmf_adapter.start_adapter:main'
+            'start_adapter = mes_rmf_adapter.start_adapter:main',
+            'translator = mes_rmf_adapter.translator_coords:main'
         ],
     },
 )

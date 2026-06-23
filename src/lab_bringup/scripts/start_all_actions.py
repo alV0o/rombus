@@ -183,33 +183,11 @@ def menu(answer):
     
     elif answer == 7:
 
-        current_script_path = os.path.abspath(__file__)
-
-        # 2. Поднимаемся на 4 уровня вверх:
-        # scripts -> lab_bringup -> src -> test_ws
-        current_dir = current_script_path
-        for _ in range(4):
-            current_dir = os.path.dirname(current_dir)
-
-        workspace_root = current_dir
-        target_script = os.path.join(
-            workspace_root,
-            "src",
-            "mes_rmf_adapter",
-            "mes_rmf_adapter",
-            "translator_coords.py",
-        )
-
-        if not os.path.exists(target_script):
-            print(f"[Ошибка] Файл не найден по пути: {target_script}")
-            return 1
-
         log_file = open(f"{LOG_DIR}/process_7_translator.log", "w", encoding="utf-8")
         log_files[answer] = log_file
 
         process = subprocess.Popen(
-            [sys.executable, os.path.basename(target_script)],
-            cwd=os.path.dirname(target_script),
+            ['ros2', 'run', 'mes_rmf_adapter', 'translator'],
             stdout=log_file,
             stderr=subprocess.STDOUT,
             bufsize=0,
