@@ -65,7 +65,7 @@ start_zenohd_bridge = ExecuteProcess(
 
 ### В случае ошибок можете посмотреть логи в файлах по пути `your_workspace/install/lab_bringup/lib/logs`
 
-## Также вы можете ознакомиться с подробным обзором [структуры](documentation/Structure) проекта
+## Также вы можете ознакомиться с подробным обзором [структуры](documentation/Structure.md) проекта
 
 ## Если хотите запустить демонстрационные примеры
 1. Перейдите в папку `presets`

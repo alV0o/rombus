@@ -8,7 +8,7 @@
 	1. `action.py` — абстрактный класс для обработки [`action`](https://stepik.org/lesson/1505348/step/1?unit=1525494) роботом
 	2. `robot_adapter.py` — абстрактный класс адаптера  для одного `turtlebot3`
 	3. `nav2_robot_adapter.py` — реализация адаптера `robot_adapter` с учетом особенностей `Nav2`
-	4. `fleet_adapter.py` — полноценный [адаптер](documentation/Fleet_Adapter) для флота роботов с гибкой настройкой (sim_time, server_uri, config_path, nav_graph_path)
+	4. `fleet_adapter.py` — полноценный [адаптер](documentation/Fleet_Adapter.md) для флота роботов с гибкой настройкой (sim_time, server_uri, config_path, nav_graph_path)
 	5. `fleet_adapter.launch.xml` — удобный launch-файл для запуска `fleet_adapter.py`
 3. Пакет `free_fleet_examples`
 	1. Папка `config` — содержит три подпапки `fleet`, `template`, `zenoh`, которые содержат конфигурационные файлы для работы программы. `template` - содержит шаблоны [`fleet_config`](https://osrf.github.io/ros2multirobotbook/integration_fleets_adapter_tutorial.html#2-update-the-configyaml-file), `fleet` содержит файлы, которые являются по шаблону заполненными конфигурационными файлами, а `zenoh` содержит файл конфигурации для [Zenoh](https://github.com/eclipse-zenoh/zenoh?tab=readme-ov-file#configuration-options)
@@ -36,7 +36,7 @@
 7. Пакет `test_building_maps`
 	1. Папка `assets` — содержит PNG изображения карты
 	2. Папка `configs/template` — содержит шаблон для [конфигурационного файла](https://github.com/ros-navigation/navigation2/tree/main/nav2_map_server#map-server-1) для `Nav2`
-	3. Папка `maps` — содержит `*.building.yaml` файл для карты, который содержит все необходимые данные о карте, созданной в [`traffic-editor`](documentation/Traffic-editor)
+	3. Папка `maps` — содержит `*.building.yaml` файл для карты, который содержит все необходимые данные о карте, созданной в [`traffic-editor`](documentation/Traffic-editor.md)
 	4. `CMakeLists.txt` — содержится во многих пакетах для копирования папок в `install`, но в этом пакете он производит также дополнительное выполнение скриптов сборки мира на базе карты для `Gazebo` с помощью , а также формирование файлов графов `nav_graphs` для карты с помощью [`building_map_generator`](https://osrf.github.io/ros2multirobotbook/simulation.html#building-map-generator)
 ## install
 ### В основном содержит то же самое, что и src, но есть отличия:
