@@ -1,9 +1,0 @@
-image: ../assets/warehouse.png
-resolution: 0.08436711167505838
-origin:
-- 0.0
-- -50.620267005035025
-- 0.0
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196

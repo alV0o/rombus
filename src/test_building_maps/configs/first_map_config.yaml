@@ -1,9 +1,0 @@
-image: ../assets/first_map.png
-resolution: 0.05036210305874415
-origin:
-- 0.0
-- -10.072420611748829
-- 0.0
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
