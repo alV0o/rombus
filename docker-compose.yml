@@ -1,16 +1,23 @@
 services:
-  ros2_app:
+  rombus_app:
     build: .
-    container_name: ros2_jazzy_container
+    container_name: rombus_container
     network_mode: "host"
+    ipc: "host"
     tty: true
     stdin_open: true
     environment:
       - DISPLAY=${DISPLAY}
+      - XDG_RUNTIME_DIR=/tmp/runtime-root
     volumes:
       # Магия монтирования: текущая папка на ПК друга (где src) 
       # связывается с папкой /ros2_ws внутри контейнера
       - .:/ros2_ws
-      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - "44"
+      - "992"
     # Оставляем контейнер запущенным и подгружаем ROS окружение
     command: sleep infinity

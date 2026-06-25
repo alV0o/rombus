@@ -37,6 +37,7 @@ def generate_launch_description():
             '-c', os.path.join(get_package_share_directory('free_fleet_examples'), 'config', 'zenoh', 'nav2_unique_multi_tb3_zenoh_bridge_ros2dds_client_config.json5')
         ],
         cwd='/ros2_ws/src',
+        # cwd='/home/alvo/test_ws/src',
         output = 'screen'
     )
 
