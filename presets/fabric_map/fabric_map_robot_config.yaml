@@ -1,0 +1,78 @@
+robots:
+  - name: "robot1"
+    x_pose: 5.5
+    y_pose: -55.0
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_1"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_1"
+    stay_type: "park"
+
+  - name: "robot2"
+    x_pose: 5.5
+    y_pose: -54.5
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_2"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_2"
+    stay_type: "park"
+
+  - name: "robot3"
+    x_pose: 5.5
+    y_pose: -54.0
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_3"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_3"
+    stay_type: "park"
+  
+  - name: "robot4"
+    x_pose: 38.5
+    y_pose: -3.5
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_1"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_4"
+    stay_type: "park"
+
+  - name: "robot5"
+    x_pose: 38.5
+    y_pose: -4.0
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_2"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_5"
+    stay_type: "park"
+
+  - name: "robot6"
+    x_pose: 38.5
+    y_pose: -4.5
+    z_pose: 0.01
+    roll: 0.0
+    pitch: 0.0
+    yaw: 0.0
+    initial_map: "L1"
+    charger: "dock_station_3"
+    type: "turtlebot3"
+    stay_waypoint: "stay_zone_1"
+    stay_type: "park"

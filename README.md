@@ -3,9 +3,10 @@
 
 # Запуск с помощью Docker
 1. Зайти в корневую папку проекта, где лежат файлы `Dockerfile` и `docker-compose.yml`
-2. Открыть ее в терминале и написать команду `sudo docker compose build rombus_app
+2. Открыть ее в терминале и написать команду `sudo docker compose build rombus_app`
 3. После окончания сборки запустить контейнер командой `sudo docker compose up -d`
-4. Перейти в терминал изолированной среды Docker с помощью команды `docker exec -it rombus_container bash`
+4. Для корректной работы графических приложений выполните команду `xhost +local:docker`
+5. Перейти в терминал изолированной среды Docker с помощью команды `docker exec -it rombus_container bash`
 ### Теперь вы можете запускать окружение контейнера для корректной работы с программой когда угодно последними двумя командами
 
 ## Вам понадобится если вы хотите работать в своем окружении
@@ -22,6 +23,22 @@
 cd ~/your_ws
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
+```
+
+#### Перед запуском из исходников также требуется заменить путь в файле `~/your_ws/src/lab_bringup/launch/multi_real_launch.py` 
+
+```python
+start_zenohd_bridge = ExecuteProcess(
+	cmd=[
+		'./zenoh-bridge-ros2dds',
+		'-c', os.path.join(get_package_share_directory('free_fleet_examples'),
+		'config', 'zenoh', 'nav2_unique_multi_tb3_zenoh_bridge_ros2dds_client_config.json5')
+	],
+	cwd='/ros2_ws/src', # закоментируйте
+	# cwd='/home/alvo/test_ws/src', # раскомментируйте строку,
+									# замените на свой путь
+	output = 'screen'
+)
 ```
 
 # Шаги для создания вашей первой симуляции производства с помощью роботов в Rombus
@@ -47,3 +64,19 @@ rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
 ## Поздравляю, вы создали первую симуляцию производства!
 
 ### В случае ошибок можете посмотреть логи в файлах по пути `your_workspace/install/lab_bringup/lib/logs`
+
+## Также вы можете ознакомиться с подробным обзором [структуры](documentation/Structure) проекта
+
+## Если хотите запустить демонстрационные примеры
+1. Перейдите в папку `presets`
+2. Скопируйте файлы из нужной вам карты
+3. Перенесите их в нужные папки (В src. Смотрите структуру)
+4. Выполните все шаги из пункта для **создания вашей первой карты**, пропуская шаг 3, но ни в коем случае не пропуская шаг 6! (Вам достаточно дождаться открытия `traffic-editor`, затем закрыть и написать название вашей демонстрационной карты) 
+
+# Возможные проблемы и их решение
+
+1. **RMF-Web не видит роботов**
+   - Возможно, проблема в некорректных координатах робота, для этого нужно исправить координаты в конфигурационном файле по пути `~/your_ws/install/main_simulation/share/main_simulation/config/your_map_robot_config.yaml`
+   - Возможно, вы указали некорректные данные при запуске адаптера или логики RMF. Для этого требуется закрыть все процессы внутри Rombus (\[9]) и перезапустить их.
+
+### При неизвестной проблеме пишите на почту — voroshilov.alex07@gmail.com

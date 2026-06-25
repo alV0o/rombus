@@ -2,3 +2,8 @@
 /install
 /log
 /.vscode
+/src/test_building_maps/maps/*.building.yaml
+/src/test_building_maps/configs/*.yaml
+/src/test_building_maps/assets/*.png
+/src/main_simulation/config/*.yaml
+/src/free_fleet_examples/config/fleet/*.yaml
