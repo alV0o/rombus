@@ -1,0 +1,28 @@
+robots:
+- name: robot1
+  x_pose: 7.4
+  y_pose: -2.1
+  z_pose: 0.01
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+  initial_map: L1
+  charger: start
+  type: turtlebot3
+  stay_waypoint: start
+  stay_type: charge
+
+
+- name: robot2
+  x_pose: 1.0
+  y_pose: -2.0
+  z_pose: 0.01
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0
+  initial_map: L1
+  charger: end
+  type: turtlebot3
+  stay_waypoint: end
+  stay_type: charge
+
