@@ -1,6 +1,28 @@
 > Program
 > # **Rombus** - **R**obotics, **O**rchestration, **M**ES and **B**atch **U**nit **S**ystem
 
+# Запуск с помощью Docker
+1. Зайти в корневую папку проекта, где лежат файлы `Dockerfile` и `docker-compose.yml`
+2. Открыть ее в терминале и написать команду `sudo docker compose build rombus_app
+3. После окончания сборки запустить контейнер командой `sudo docker compose up -d`
+4. Перейти в терминал изолированной среды Docker с помощью команды `docker exec -it rombus_container bash`
+### Теперь вы можете запускать окружение контейнера для корректной работы с программой когда угодно последними двумя командами
+
+## Вам понадобится если вы хотите работать в своем окружении
+
+- Ubuntu 24.04 (Проект был разработан и протестирован на этой ОС)
+- [ROS2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) 
+- [Gazebo Harmonic](https://gazebosim.org/docs/harmonic/install/)
+- [Nav2](https://docs.nav2.org/getting_started/index.html)
+- [Open-RMF](https://github.com/open-rmf/rmf)
+- [Зависимости для free_fleet](https://github.com/open-rmf/free_fleet#dependency-installation-source-build-and-setup) (Zenoh, CycloneDDS, zenoh-bridge, Python libraries)
+- Python libraries: FastAPI, Uvicorn, Pydantic, ruamel.yaml
+#### При наличии ошибок с зависимостями после запуска, попробуйте использовать `rosdep` с помощью команды 
+```bash
+cd ~/your_ws
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro $ROS_DISTRO -y
+```
 
 # Шаги для создания вашей первой симуляции производства с помощью роботов в Rombus
 
